@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+<<<<<<< HEAD
+  "WorkspaceRootPath": "C:\\xampp\\htdocs\\Programaci-n-Avanzada\\Practica1\\",
+=======
+  "WorkspaceRootPath": "C:\\PrograAvanzada\\Programaci-n-Avanzada\\Practica1\\",
+>>>>>>> 8cab2a54a72492d66ef26c1394385315fc17d75a
+  "Documents": [],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": []
+    }
+  ]
+}
