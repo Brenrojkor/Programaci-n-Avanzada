@@ -1,12 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\XPC\\source\\repos\\WebSite1\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\xampp\\htdocs\\Programaci-n-Avanzada\\WebSite1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2023F041-CC5C-4A6F-B23C-7C207E6E2D25}|C:\\xampp\\htdocs\\Programaci-n-Avanzada\\WebSite1\\WebSite1|c:\\xampp\\htdocs\\programaci-n-avanzada\\website1\\website1\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2023F041-CC5C-4A6F-B23C-7C207E6E2D25}|C:\\xampp\\htdocs\\Programaci-n-Avanzada\\WebSite1\\WebSite1|solutionrelative:website1\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\Programaci-n-Avanzada\\WebSite1\\WebSite1\\About.cshtml",
+              "RelativeDocumentMoniker": "WebSite1\\About.cshtml",
+              "ToolTip": "C:\\xampp\\htdocs\\Programaci-n-Avanzada\\WebSite1\\WebSite1\\About.cshtml",
+              "RelativeToolTip": "WebSite1\\About.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-05T00:46:06.635Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
