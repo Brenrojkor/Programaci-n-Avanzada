@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\PrograAvanzada\\Programaci-n-Avanzada\\Practica1\\",
+  "WorkspaceRootPath": "C:\\Projects\\Programaci-n-Avanzada\\Practica1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE795125-0D0C-4276-89C0-FD3BB2A7E965}|Practica1\\Practica1.csproj|c:\\prograavanzada\\programaci-n-avanzada\\practica1\\practica1\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE795125-0D0C-4276-89C0-FD3BB2A7E965}|Practica1\\Practica1.csproj|solutionrelative:practica1\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projects\\Programaci-n-Avanzada\\Practica1\\Practica1\\Pages\\Shared\\_Layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Practica1\\Pages\\Shared\\_Layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE795125-0D0C-4276-89C0-FD3BB2A7E965}|Practica1\\Practica1.csproj|c:\\prograavanzada\\programaci-n-avanzada\\practica1\\practica1\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE795125-0D0C-4276-89C0-FD3BB2A7E965}|Practica1\\Practica1.csproj|solutionrelative:practica1\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projects\\Programaci-n-Avanzada\\Practica1\\Practica1\\Pages\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Practica1\\Pages\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,9 +24,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\PrograAvanzada\\Programaci-n-Avanzada\\Practica1\\Practica1\\Pages\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Projects\\Programaci-n-Avanzada\\Practica1\\Practica1\\Pages\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Practica1\\Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\PrograAvanzada\\Programaci-n-Avanzada\\Practica1\\Practica1\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Projects\\Programaci-n-Avanzada\\Practica1\\Practica1\\Pages\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Practica1\\Pages\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -37,9 +37,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\PrograAvanzada\\Programaci-n-Avanzada\\Practica1\\Practica1\\Pages\\Index.cshtml",
+              "DocumentMoniker": "C:\\Projects\\Programaci-n-Avanzada\\Practica1\\Practica1\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Practica1\\Pages\\Index.cshtml",
-              "ToolTip": "C:\\PrograAvanzada\\Programaci-n-Avanzada\\Practica1\\Practica1\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Projects\\Programaci-n-Avanzada\\Practica1\\Practica1\\Pages\\Index.cshtml",
               "RelativeToolTip": "Practica1\\Pages\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",

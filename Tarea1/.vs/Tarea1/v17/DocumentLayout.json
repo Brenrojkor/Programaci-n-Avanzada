@@ -1,12 +1,71 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\PrograAvanzada\\Programaci-n-Avanzada\\Tarea1\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Projects\\Programaci-n-Avanzada\\Tarea1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0151B3-73C5-4A71-9FB0-0106B7586F38}|Tarea1\\Tarea1.csproj|c:\\projects\\programaci-n-avanzada\\tarea1\\tarea1\\pages\\series.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6A0151B3-73C5-4A71-9FB0-0106B7586F38}|Tarea1\\Tarea1.csproj|solutionrelative:tarea1\\pages\\series.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0151B3-73C5-4A71-9FB0-0106B7586F38}|Tarea1\\Tarea1.csproj|c:\\projects\\programaci-n-avanzada\\tarea1\\tarea1\\pages\\playlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6A0151B3-73C5-4A71-9FB0-0106B7586F38}|Tarea1\\Tarea1.csproj|solutionrelative:tarea1\\pages\\playlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A0151B3-73C5-4A71-9FB0-0106B7586F38}|Tarea1\\Tarea1.csproj|c:\\projects\\programaci-n-avanzada\\tarea1\\tarea1\\pages\\presentacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6A0151B3-73C5-4A71-9FB0-0106B7586F38}|Tarea1\\Tarea1.csproj|solutionrelative:tarea1\\pages\\presentacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Series.cshtml",
+              "DocumentMoniker": "C:\\Projects\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\Pages\\Series.cshtml",
+              "RelativeDocumentMoniker": "Tarea1\\Pages\\Series.cshtml",
+              "ToolTip": "C:\\Projects\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\Pages\\Series.cshtml",
+              "RelativeToolTip": "Tarea1\\Pages\\Series.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAABIAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-09T19:05:10.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Playlist.cshtml",
+              "DocumentMoniker": "C:\\Projects\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\Pages\\Playlist.cshtml",
+              "RelativeDocumentMoniker": "Tarea1\\Pages\\Playlist.cshtml",
+              "ToolTip": "C:\\Projects\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\Pages\\Playlist.cshtml",
+              "RelativeToolTip": "Tarea1\\Pages\\Playlist.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-09T19:04:38.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Presentacion.cshtml",
+              "DocumentMoniker": "C:\\Projects\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\Pages\\Presentacion.cshtml",
+              "RelativeDocumentMoniker": "Tarea1\\Pages\\Presentacion.cshtml",
+              "ToolTip": "C:\\Projects\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\Pages\\Presentacion.cshtml",
+              "RelativeToolTip": "Tarea1\\Pages\\Presentacion.cshtml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwDQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-09T19:04:09.055Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

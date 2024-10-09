@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PrograAvanzada\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\Tarea1.csproj": {}
+    "C:\\Projects\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\Tarea1.csproj": {}
   },
   "projects": {
-    "C:\\PrograAvanzada\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\Tarea1.csproj": {
+    "C:\\Projects\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\Tarea1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PrograAvanzada\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\Tarea1.csproj",
+        "projectUniqueName": "C:\\Projects\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\Tarea1.csproj",
         "projectName": "Tarea1",
-        "projectPath": "C:\\PrograAvanzada\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\Tarea1.csproj",
-        "packagesPath": "C:\\Users\\XPC\\.nuget\\packages\\",
-        "outputPath": "C:\\PrograAvanzada\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\obj\\",
+        "projectPath": "C:\\Projects\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\Tarea1.csproj",
+        "packagesPath": "C:\\Users\\josea\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Programaci-n-Avanzada\\Tarea1\\Tarea1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\XPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\josea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
