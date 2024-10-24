@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticaProgramada_2", "PracticaProgramada_2.csproj", "{27D4C939-EDB7-4860-83EB-9BB3CFB6091E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticaProgramada_2", "PracticaProgramada_2.csproj", "{27D4C939-EDB7-4860-83EB-9BB3CFB6091E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
