@@ -17,4 +17,17 @@ CREATE TABLE UsuariosG2P (
     RolID INT, FOREIGN KEY (RolID) REFERENCES RolG2P(RolID)
 );
 
+CREATE TABLE Pokedex (
+    PokedexID INT PRIMARY KEY,
+    NombrePokemon VARCHAR(50) NOT NULL,
+    Tipo VARCHAR(50),
+    Debilidad VARCHAR(50),
+    EvolucionID INT,
+    Peso DECIMAL(5,2),
+    Numero INT,
+    FOREIGN KEY (EvolucionID) REFERENCES Pokedex(PokedexID)
+);
+
+
+
 >>>>>>> Brenda
