@@ -28,6 +28,22 @@ CREATE TABLE Pokedex (
     FOREIGN KEY (EvolucionID) REFERENCES Pokedex(PokedexID)
 );
 
-
-
 >>>>>>> Brenda
+
+CREATE TABLE EntrenadoresPokemons (
+EntrnadorPokemonID INT PRIMARY KEY,
+UsuarioID INT,
+PokedexID INT,
+Nivel INT,
+Estado VARCHAR(50),
+FOREIGN KEY (UsuarioID) REFERENCES UsuariosG2P(UsuarioID),
+FOREIGN KEY (PokedexID) REFERENCES Pokedex(PokedexID)
+);
+
+CREATE TABLE EquipoLucha (
+EquipoID INT PRIMARY KEY,
+UsuarioID INT,
+EntrenadorPokemonID INT,
+FOREIGN KEY (UsuarioID) REFERENCES UsuariosG2P(UsuarioID),
+FOREIGN KEY (EntrenadorPokemonID) REFERENCES EntrenadoresPokemons(EntrenadorPokemonID)
+);
