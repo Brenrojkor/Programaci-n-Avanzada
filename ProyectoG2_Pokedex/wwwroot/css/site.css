@@ -18,5 +18,166 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-image: url('../images/fondomensajes2.jpg'); /* Ajusta la ruta según tu estructura */
+    background-size: cover; /* Ajusta para que el fondo cubra toda la pantalla */
+    background-repeat: no-repeat; /* Evita que se repita */
+    background-attachment: fixed; /* Fija el fondo mientras se desplaza el contenido */
+    background-position: center; /* Centra la imagen */
 }
+
+
+.phone-simulator {
+    width: 300px; /* Ancho del "celular" */
+    height: 500px; /* Altura del "celular" */
+    margin: 0 auto; /* Centrar en la página */
+    border: 5px solid black; /* Borde negro */
+    border-radius: 20px; /* Bordes redondeados */
+    display: flex;
+    flex-direction: column;
+    background-color: white; /* Fondo interno blanco */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+}
+
+
+/* Encabezado del teléfono */
+.phone-header {
+    height: 50px;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+}
+
+/* Cuerpo del teléfono */
+.phone-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    background-color: #000000;
+    flex-direction: column;
+    gap: 10px;
+    background-image: url('../images/fondomovil.jpg'); /* Ajusta la ruta según tu estructura */
+    background-size: contain; /* Ajusta para que el fondo cubra toda la pantalla */
+    background-repeat: no-repeat; /* Evita que se repita */
+    background-attachment: fixed; /* Fija el fondo mientras se desplaza el contenido */
+    background-position: center; /* Centra la imagen */
+}
+
+/* Mensajes */
+.message {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+    .message.received {
+        background-color: #e9ecef;
+        align-self: flex-start;
+    }
+
+    .message.sent {
+        background-color: #007bff;
+        color: white;
+        align-self: flex-end;
+    }
+
+/* Pie del teléfono */
+.phone-footer {
+    display: flex;
+    padding: 10px;
+    gap: 5px;
+    border-top: 1px solid black;
+    background-color: #000000;
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+}
+
+/* Input de mensaje */
+.message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Botón de enviar */
+.send-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .send-button:hover {
+        background-color: #0056b3;
+    }
+
+.retos-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.entrenadores-list, .retos-pendientes {
+    width: 45%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+    border: 5px solid white; /* Borde negro */
+}
+
+    .entrenadores-list h2, .retos-pendientes h2 {
+        text-align: center;
+        color: white;
+    }
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    li button {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        li button.enviar-reto {
+            background-color: #28a745;
+            color: white;
+        }
+
+        li button.aceptar-reto {
+            background-color: #007bff;
+            color: white;
+        }
+
+        li button.rechazar-reto {
+            background-color: #dc3545;
+            color: white;
+        }

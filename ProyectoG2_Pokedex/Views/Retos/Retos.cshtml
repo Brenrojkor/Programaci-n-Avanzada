@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Retos de Lucha";
+}
+
+<!-- Vincula el archivo JavaScript -->
+<script src="~/js/retos.js"></script>
+
+<div class="text-center">
+    <img src="~/images/logopokemon1.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
+    <h1 class="display-4 mb-4" style="font-weight: bold;">Retos de Lucha</h1>
+
+    <div class="retos-container">
+        <!-- Lista de entrenadores -->
+        <div class="entrenadores-list">
+            <h2>Entrenadores disponibles</h2>
+            <ul id="entrenadores">
+                <!-- Se llenará dinámicamente con JavaScript -->
+            </ul>
+        </div>
+
+        <!-- Retos pendientes -->
+        <div class="retos-pendientes">
+            <h2>Retos recibidos</h2>
+            <ul id="retos">
+                <!-- Se llenará dinámicamente con JavaScript -->
+            </ul>
+        </div>
+    </div>
+</div>
+
