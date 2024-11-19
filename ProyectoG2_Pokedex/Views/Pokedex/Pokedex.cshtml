@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Pokedex";
+}
+<h1>@ViewData["Title"]</h1>
+
+<!-- Enlace a la hoja de estilos -->
+<link rel="stylesheet" href="~/css/pokedex.css" />
+<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+
+<div class="container">
+    <div class="text-center">
+        <img src="~/images/logopokemon1.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
+    </div>
+    <h1>Pokedex</h1>
+    <ol id="pokedex"></ol>
+</div>
+
+<!-- Archivo JavaScript para cargar los datos -->
+<script src="~/js/pokedex.js"></script>
