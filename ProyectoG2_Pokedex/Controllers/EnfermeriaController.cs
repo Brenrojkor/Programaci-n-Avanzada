@@ -2,7 +2,7 @@
 
 namespace ProyectoG2_Pokedex.Controllers
 {
-    public class AtencionEnfermeriaController : Controller
+    public class EnfermeriaController : Controller
     {
         public IActionResult Index()
         {
