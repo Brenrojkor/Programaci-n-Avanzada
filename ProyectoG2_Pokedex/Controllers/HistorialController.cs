@@ -2,7 +2,7 @@
 
 namespace ProyectoG2_Pokedex.Controllers
 {
-    public class HistorialAtencionController : Controller
+    public class HistorialController : Controller
     {
         public IActionResult Index()
         {
