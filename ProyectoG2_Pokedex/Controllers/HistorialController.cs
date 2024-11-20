@@ -4,7 +4,7 @@ namespace ProyectoG2_Pokedex.Controllers
 {
     public class HistorialController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Historial()
         {
             return View();
         }
