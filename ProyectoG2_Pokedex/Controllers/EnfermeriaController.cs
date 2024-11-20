@@ -4,7 +4,7 @@ namespace ProyectoG2_Pokedex.Controllers
 {
     public class EnfermeriaController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Enfermeria()
         {
             return View();
         }
