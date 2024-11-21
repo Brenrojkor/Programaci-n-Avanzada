@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using ProyectoG2_Pokedex.Models;
 using System.Diagnostics;
 
+
 namespace ProyectoG2_Pokedex.Controllers
 {
     public class HomeController : Controller
