@@ -6,18 +6,31 @@
 
 <div class="text-center">
     <img src="~/images/pokehistorial.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
+
+    <div class="form-container">
+        <h2>Agregar Pokémon al Historial</h2>
+        <form id="form-agregar-pokemon">
+            <label for="nombre-pokemon">Nombre:</label>
+            <input type="text" id="nombre-pokemon" required />
+            <label for="entrenador-pokemon">Entrenador:</label>
+            <input type="text" id="entrenador-pokemon" required />
+            <label for="estado-pokemon">Estado:</label>
+            <select id="estado-pokemon">
+                <option value="Pendiente">Pendiente</option>
+                <option value="En tratamiento">En tratamiento</option>
+            </select>
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+
     <div class="historial-container">
-        <div class="retos-enviados">
-            <h2>Pokémones Enviados</h2>
-            <br />
-            <ul id="pokemon-enviados">
-            </ul>
+        <div class="pokemon-enviados">
+            <h2>Pokémon Enviados</h2>
+            <ul id="pokemon-enviados"></ul>
         </div>
         <div class="pokemon-tratados">
-            <h2>Pokémones Tratados</h2>
-            <br />
-            <ul id="pokemon-tratados">
-            </ul>
+            <h2>Pokémon Tratados</h2>
+            <ul id="pokemon-tratados"></ul>
         </div>
     </div>
 </div>
