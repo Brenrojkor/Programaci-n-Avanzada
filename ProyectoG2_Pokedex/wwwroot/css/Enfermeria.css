@@ -61,10 +61,6 @@ button {
         border-radius: 4px;
     }
 
-.pokemon-logo {
-    max-width: 200px;
-    height: auto;
-}
 
 select {
     padding: 8px;
