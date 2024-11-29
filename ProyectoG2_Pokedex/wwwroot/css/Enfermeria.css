@@ -68,16 +68,3 @@ select {
     border-radius: 4px;
     margin-bottom: 10px;
 }
-
-.container form {
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 10px;
-}
-
-#pokemones-pendientes {
-    margin: 0;
-    padding: 0;
-}
