@@ -1,6 +1,93 @@
-﻿namespace ProyectoG2_Pokedex.wwwroot.css
-{
-    public class Historial
-    {
+﻿.enfermeria-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+}
+
+/* Estilo para la lista de enfermeras */
+.enfermeras-list,
+.pokemones-pendientes {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+/* Encabezados */
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilo para la lista de enfermeras y Pokémon */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para los inputs y botones */
+input[type="text"],
+select {
+    width: calc(100% - 22px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+/* Estilo para la imagen del logo */
+.pokemon-logo {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Estilo de separación entre las secciones */
+.enfermeras-list {
+    flex: 1;
+}
+
+.pokemones-pendientes {
+    flex: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .enfermeria-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enfermeras-list,
+    .pokemones-pendientes {
+        width: 90%;
     }
 }
