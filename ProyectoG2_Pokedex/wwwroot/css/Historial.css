@@ -7,7 +7,6 @@
     border-radius: 10px;
 }
 
-/* Estilo para la lista de enfermeras */
 .enfermeras-list,
 .pokemones-pendientes {
     background-color: #ffffff;
@@ -17,13 +16,11 @@
     width: 45%;
 }
 
-/* Encabezados */
 h2 {
     color: #333;
     margin-bottom: 10px;
 }
 
-/* Estilo para la lista de enfermeras y Pokémon */
 ul {
     list-style-type: none;
     padding: 0;
@@ -35,7 +32,6 @@ li {
     border-bottom: 1px solid #ddd;
 }
 
-/* Estilo para los inputs y botones */
 input[type="text"],
 select {
     width: calc(100% - 22px);
@@ -62,15 +58,6 @@ button {
         background-color: #45a049;
     }
 
-/* Estilo para la imagen del logo */
-.pokemon-logo {
-    max-width: 200px;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
-}
-
-/* Estilo de separación entre las secciones */
 .enfermeras-list {
     flex: 1;
 }
@@ -79,7 +66,6 @@ button {
     flex: 1;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .enfermeria-container {
         flex-direction: column;
