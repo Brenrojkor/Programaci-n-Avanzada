@@ -1,50 +1,50 @@
-﻿const retosEnviados = [
-    { id: 1, destinatario: 'Gary Oak', estado: 'Aceptado' },
-    { id: 2, destinatario: 'Misty', estado: 'Pendiente' },
-    { id: 3, destinatario: 'Brock', estado: 'Rechazado' }
+﻿const pokemonEnviados = [
+    { id: 1, nombre: 'Pikachu', entrenador: 'Ash Ketchum', estado: 'Pendiente' },
+    { id: 2, nombre: 'Charmander', entrenador: 'Gary Oak', estado: 'En tratamiento' },
+    { id: 3, nombre: 'Bulbasaur', entrenador: 'Misty', estado: 'Pendiente' }
 ];
 
-const retosRecibidos = [
-    { id: 1, remitente: 'Ash Ketchum', estado: 'Pendiente' },
-    { id: 2, remitente: 'Jessie', estado: 'Aceptado' },
-    { id: 3, remitente: 'James', estado: 'Rechazado' }
+const pokemonTratados = [
+    { id: 4, nombre: 'Squirtle', entrenador: 'Brock', resultado: 'Recuperado' },
+    { id: 5, nombre: 'Eevee', entrenador: 'Jessie', resultado: 'Recuperado' }
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
-    cargarRetosEnviados();
-    cargarRetosRecibidos();
+    cargarPokemonEnviados();
+    cargarPokemonTratados();
 });
 
-function cargarRetosEnviados() {
-    const retosEnviadosList = document.getElementById('retos-enviados');
-    retosEnviadosList.innerHTML = ''; 
-
-    retosEnviados.forEach(reto => {
-        const li = document.createElement('li');
-        li.innerHTML = `<span>Reto enviado a: ${reto.destinatario} - Estado: ${reto.estado}</span>`;
-        retosEnviadosList.appendChild(li);
-    });
-}
-
-function cargarRetosRecibidos() {
-    const retosRecibidosList = document.getElementById('retos-recibidos');
-    retosRecibidosList.innerHTML = '';
-
-    retosRecibidos.forEach(reto => {
+function cargarPokemonEnviados() {
+    const pokemonEnviadosList = document.getElementById('pokemon-enviados');
+    pokemonEnviadosList.innerHTML = '';
+    pokemonEnviados.forEach(pokemon => {
         const li = document.createElement('li');
         li.innerHTML = `
-            <span>Reto recibido de: ${reto.remitente} - Estado: ${reto.estado}</span>
-            <button class="aceptar-reto" onclick="aceptarReto(${reto.id})">Aceptar</button>
-            <button class="rechazar-reto" onclick="rechazarReto(${reto.id})">Rechazar</button>
+            <span>${pokemon.nombre} (Entrenador: ${pokemon.entrenador}) - Estado: ${pokemon.estado}</span>
+            <button class="iniciar-tratamiento" onclick="iniciarTratamiento(${pokemon.id})">Iniciar tratamiento</button>
         `;
-        retosRecibidosList.appendChild(li);
+        pokemonEnviadosList.appendChild(li);
     });
 }
 
-function aceptarReto(retoId) {
-    alert(`¡Has aceptado el reto con ID ${retoId}!`);
+function cargarPokemonTratados() {
+    const pokemonTratadosList = document.getElementById('pokemon-tratados');
+    pokemonTratadosList.innerHTML = '';
+
+    pokemonTratados.forEach(pokemon => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <span>${pokemon.nombre} (Entrenador: ${pokemon.entrenador}) - Resultado: ${pokemon.resultado}</span>
+        `;
+        pokemonTratadosList.appendChild(li);
+    });
 }
 
-function rechazarReto(retoId) {
-    alert(`Has rechazado el reto con ID ${retoId}.`);
+function iniciarTratamiento(pokemonId) {
+    const pokemon = pokemonEnviados.find(p => p.id === pokemonId);
+    if (pokemon) {
+        pokemon.estado = 'En tratamiento';
+        alert(`El tratamiento de ${pokemon.nombre} ha comenzado.`);
+        cargarPokemonEnviados();
+    }
 }
