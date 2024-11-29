@@ -6,8 +6,16 @@
 
 <div class="text-center">
     <img src="~/images/pokequipo.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
+    <div class="equipo-container">
+        <div class="equipo-list">
+        <h2>Equipo de Lucha</h2>
+        <ul id="equipoList"></ul>
+        <br />
+        <input type="text" id="nuevoMiembro" placeholder="Nombre del Pokémon">
+        <br />
+        <button class="add-btn" onclick="addMiembro()">Agregar Miembro</button>
+        <button class="edit-btn" onclick="editMiembro()">Modificar Miembro</button>
+        <button class="delete-btn" onclick="deleteMiembro()">Eliminar Miembro</button>
+        </div>
+    </div>
 </div>
-
-<link rel="stylesheet" href="~/css/pokedex.css" />
-
-
