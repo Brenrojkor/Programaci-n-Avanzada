@@ -1,56 +1,44 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+﻿const retosEnviados = [
+    { id: 1, destinatario: 'Gary Oak', estado: 'Aceptado' },
+    { id: 2, destinatario: 'Misty', estado: 'Pendiente' },
+    { id: 3, destinatario: 'Brock', estado: 'Rechazado' }
+];
+
+const retosRecibidos = [
+    { id: 1, remitente: 'Ash Ketchum', estado: 'Pendiente' },
+    { id: 2, remitente: 'Jessie', estado: 'Aceptado' },
+    { id: 3, remitente: 'James', estado: 'Rechazado' }
+];
+
+document.addEventListener("DOMContentLoaded", function () {
     cargarRetosEnviados();
     cargarRetosRecibidos();
 });
 
-async function cargarRetosEnviados() {
-    try {
-        const response = await fetch('/api/retos-enviados');
-        const retosEnviados = await response.json();
+function cargarRetosEnviados() {
+    const retosEnviadosList = document.getElementById('retos-enviados');
+    retosEnviadosList.innerHTML = ''; 
 
-        const retosEnviadosList = document.getElementById('retos-enviados');
-        retosEnviadosList.innerHTML = ''; 
-
-        retosEnviados.forEach(reto => {
-            const li = document.createElement('li');
-            li.innerHTML = `
-                <span>Reto enviado a: ${reto.destinatario} - Estado: ${reto.estado}</span>
-            `;
-            retosEnviadosList.appendChild(li);
-        });
-    } catch (error) {
-        console.error('Error al cargar los retos enviados:', error);
-    }
+    retosEnviados.forEach(reto => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span>Reto enviado a: ${reto.destinatario} - Estado: ${reto.estado}</span>`;
+        retosEnviadosList.appendChild(li);
+    });
 }
 
-async function cargarRetosRecibidos() {
-    try {
-        const response = await fetch('/api/retos-recibidos');
-        const retosRecibidos = await response.json();
+function cargarRetosRecibidos() {
+    const retosRecibidosList = document.getElementById('retos-recibidos');
+    retosRecibidosList.innerHTML = '';
 
-        const retosRecibidosList = document.getElementById('retos-recibidos');
-        retosRecibidosList.innerHTML = '';
-
-        retosRecibidos.forEach(reto => {
-            const li = document.createElement('li');
-            li.innerHTML = `
-                <span>Reto recibido de: ${reto.remitente} - Estado: ${reto.estado}</span>
-                <button class="aceptar-reto" data-id="${reto.id}">Aceptar</button>
-                <button class="rechazar-reto" data-id="${reto.id}">Rechazar</button>
-            `;
-            retosRecibidosList.appendChild(li);
-        });
-
-        retosRecibidosList.addEventListener('click', function (event) {
-            if (event.target.matches('.aceptar-reto')) {
-                aceptarReto(event.target.dataset.id);
-            } else if (event.target.matches('.rechazar-reto')) {
-                rechazarReto(event.target.dataset.id);
-            }
-        });
-    } catch (error) {
-        console.error('Error al cargar los retos recibidos:', error);
-    }
+    retosRecibidos.forEach(reto => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <span>Reto recibido de: ${reto.remitente} - Estado: ${reto.estado}</span>
+            <button class="aceptar-reto" onclick="aceptarReto(${reto.id})">Aceptar</button>
+            <button class="rechazar-reto" onclick="rechazarReto(${reto.id})">Rechazar</button>
+        `;
+        retosRecibidosList.appendChild(li);
+    });
 }
 
 function aceptarReto(retoId) {
