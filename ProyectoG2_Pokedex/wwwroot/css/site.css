@@ -188,3 +188,50 @@ li {
             background-color: #ff7485;
             color: white;
         }
+
+.entrenador-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 100px;
+}
+
+
+.edit-btn {
+    background-color: #f39c12;
+    color: white;
+    margin: 20px;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    margin: 20px;
+}
+
+.add-btn {
+    background-color: #2ecc71;
+    color: white;
+    margin: 20px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.equipo-list {
+    width: 45%;
+    padding: 20px;
+    background-color: #000000d9;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 10px solid #3d6cb5;
+}
+
+.equipo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
