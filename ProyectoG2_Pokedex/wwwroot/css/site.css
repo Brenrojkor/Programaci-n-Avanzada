@@ -1,20 +1,20 @@
 html {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
+  html {
+    font-size: 16px;
+  }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 body {
@@ -26,6 +26,7 @@ body {
     background-position: center;
 }
 
+
 .phone-simulator {
     width: 400px;
     height: 700px;
@@ -35,9 +36,10 @@ body {
     display: flex;
     flex-direction: column;
     background-color: white;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
+
 
 .phone-header {
     height: 50px;
@@ -169,6 +171,7 @@ li {
         text-align: center;
         align-items: end;
     }
+        
 
         li button.enviar-reto {
             background-color: #3d6cb5;
@@ -188,10 +191,11 @@ li {
 
 .entrenador-container {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     margin-top: 100px;
 }
+
 
 .edit-btn {
     background-color: #f39c12;
@@ -230,120 +234,4 @@ button:hover {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 20px;
-}
-
-.section {
-    width: 45%;
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 3px solid #FFCC00;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-    .section h2 {
-        font-size: 24px;
-        text-align: center;
-        color: #FFCC00;
-        text-shadow: 2px 2px 5px #000;
-    }
-
-    .section ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .section li {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 10px 0;
-        padding: 10px;
-        background-color: #2A75BB;
-        border-radius: 10px;
-        color: #FFF;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .section button {
-        background-color: #FFCC00;
-        border: none;
-        color: #000;
-        padding: 10px 20px;
-        font-size: 16px;
-        font-weight: bold;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-        .section button:hover {
-            background-color: #FFD700;
-            transform: scale(1.1);
-        }
-
-        .section button:active {
-            background-color: #FFA500;
-            transform: scale(1);
-        }
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-    .table th, .table td {
-        padding: 10px;
-        text-align: center;
-        border: 1px solid #FFF;
-        background-color: #2A75BB;
-        color: white;
-    }
-
-    .table th {
-        background-color: #FFCC00;
-        color: black;
-        font-weight: bold;
-    }
-
-    .table tr:nth-child(even) {
-        background-color: rgba(42, 117, 187, 0.8);
-    }
-
-    .table tr:hover {
-        background-color: rgba(255, 204, 0, 0.8);
-    }
-    
-.error-message {
-    color: #FF0000;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 10px;
-
-}
-    
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-.message {
-    animation: fadeIn 0.5s ease-in-out;
 }
