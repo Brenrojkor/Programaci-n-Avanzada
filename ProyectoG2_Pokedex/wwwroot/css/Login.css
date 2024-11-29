@@ -1,20 +1,28 @@
 ﻿.login-container {
     text-align: center;
     padding: 20px;
-    background-color: #0061f2;
+    background-color: #3d6cb5;
     border-radius: 10px;
-    width: 90%; 
+    width: 90%;
     max-width: 400px;
-    margin: 20px auto; 
+    margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.login-header .logo {
-    width: 80%; 
-    max-width: 250px; 
-    height: auto;
-    margin: 0 auto;
+.login-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
 }
+
+    .login-header .logo {
+        max-width: 100%; /* Limita el ancho máximo */
+        height: auto; /* Mantiene la relación de aspecto */
+        margin: 0 auto; /* Centra la imagen */
+        object-fit: contain;
+    }
 
 .login-form {
     margin-top: 15px;
@@ -38,9 +46,9 @@
 }
 
 .login-button {
-    background-color: #ffcc00;
+    background-color: #ffdf5e;
     color: #000;
-    border: none;
+    border: solid #3d6cb5;
     padding: 15px;
     font-size: 16px;
     width: 100%;
