@@ -22,21 +22,49 @@ h2 {
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 li {
+    margin: 10px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #2A75BB;
-    border-radius: 10px;
-    color: #FFF;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
+
+    li span {
+        text-align: left;
+        flex-grow: 1;
+        padding-right: 10px;
+    }
+
+    li button {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+        align-items: end;
+    }
+
+
+        li button.enviar-reto {
+            background-color: #3d6cb5;
+            color: white;
+        }
+
+        li button.aceptar-reto {
+            background-color: #64bb76;
+            color: white;
+            align-items: end;
+        }
+
+        li button.rechazar-reto {
+            background-color: #ff7485;
+            color: white;
+        }
 
 button {
     background-color: #FFCC00;
