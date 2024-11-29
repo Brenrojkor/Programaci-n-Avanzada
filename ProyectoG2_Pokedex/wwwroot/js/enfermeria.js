@@ -20,9 +20,9 @@ function cargarEnfermeras() {
     enfermeras.forEach(enfermera => {
         const li = document.createElement('li');
         li.innerHTML = `
-                <span>${enfermera.nombre}</span>
-                <button class="asignar-pokemon" onclick="asignarPokemon(${enfermera.id})">Asignar Pokémon</button>
-            `;
+            <span>${enfermera.nombre}</span>
+            <button class="asignar-pokemon" onclick="asignarPokemon(${enfermera.id})">Asignar Pokémon</button>
+        `;
         enfermerasList.appendChild(li);
     });
 }
@@ -32,7 +32,7 @@ function asignarPokemon(enfermeraId) {
 }
 
 function cargarPokemonesPendientes() {
-    const pokemonesList = document.getElementById('pokemones');
+    const pokemonesList = document.getElementById('pokemones-pendientes');
 
     const pokemonesPendientes = [
         { id: 1, nombre: 'Pikachu', estado: 'herido' },
@@ -46,9 +46,9 @@ function cargarPokemonesPendientes() {
     pokemonesPendientes.forEach(pokemon => {
         const li = document.createElement('li');
         li.innerHTML = `
-                <span>${pokemon.nombre} (${pokemon.estado})</span>
-                <button class="marcar-atendido" onclick="marcarAtendido(${pokemon.id})">Atender</button>
-            `;
+            <span>${pokemon.nombre} (${pokemon.estado})</span>
+            <button class="marcar-atendido" onclick="marcarAtendido(${pokemon.id})">Atender</button>
+        `;
         pokemonesList.appendChild(li);
     });
 }
@@ -56,3 +56,4 @@ function cargarPokemonesPendientes() {
 function marcarAtendido(pokemonId) {
     alert(`¡Pokémon con ID ${pokemonId} marcado como atendido!`);
 }
+
