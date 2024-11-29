@@ -27,7 +27,48 @@ ul {
     margin: 0;
 }
 
-li {
-    padding: 5px 0;
-    border-bottom: 1px solid #ddd;
+input[type="text"],
+select {
+    width: calc(100% - 22px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+.enfermeras-list {
+    flex: 1;
+}
+
+.pokemones-pendientes {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .enfermeria-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enfermeras-list,
+    .pokemones-pendientes {
+        width: 90%;
+    }
 }
