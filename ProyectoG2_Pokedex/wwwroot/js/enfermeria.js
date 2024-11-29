@@ -1,73 +1,58 @@
-﻿const enfermeras = [
-    { id: 1, nombre: "Enfermera Joy", disponible: true },
-    { id: 2, nombre: "Enfermera Ruby", disponible: true },
-    { id: 3, nombre: "Enfermera Sapphire", disponible: false }
-];
+﻿document.addEventListener("DOMContentLoaded", function () {
+    cargarEnfermeras();
+    cargarPokemonesPendientes();
+});
 
-const pokemones = [
-    { id: 1, nombre: "Pikachu", estado: "Herido" },
-    { id: 2, nombre: "Charmander", estado: "Envenenado" },
-    { id: 3, nombre: "Bulbasaur", estado: "Cansado" }
-];
+function cargarEnfermeras() {
+    const enfermerasList = document.getElementById('enfermeras');
 
-const listaEnfermeras = document.getElementById("lista-enfermeras");
-const listaPokemones = document.getElementById("lista-pokemones");
-const btnAsignar = document.getElementById("btn-asignar");
+    const enfermeras = [
+        { id: 1, nombre: 'Joy Kanto' },
+        { id: 2, nombre: 'Joy Johto' },
+        { id: 3, nombre: 'Joy Hoenn' },
+        { id: 4, nombre: 'Joy Sinnoh' },
+        { id: 5, nombre: 'Joy Unova' },
+        { id: 6, nombre: 'Joy Kalos' },
+        { id: 7, nombre: 'Joy Alola' },
+        { id: 8, nombre: 'Joy Galar' }
+    ];
 
-function renderEnfermeras() {
-    listaEnfermeras.innerHTML = "";
-    enfermeras.forEach((enfermera) => {
-        const enfermeraItem = document.createElement("li");
-        enfermeraItem.textContent = `${enfermera.nombre} (${enfermera.disponible ? "Disponible" : "Ocupada"})`;
-        enfermeraItem.dataset.id = enfermera.id;
-        enfermeraItem.className = `list-group-item ${enfermera.disponible ? "list-group-item-success" : "list-group-item-danger"}`;
-        listaEnfermeras.appendChild(enfermeraItem);
+    enfermeras.forEach(enfermera => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+                <span>${enfermera.nombre}</span>
+                <button class="asignar-pokemon" onclick="asignarPokemon(${enfermera.id})">Asignar Pokémon</button>
+            `;
+        enfermerasList.appendChild(li);
     });
 }
 
-function renderPokemones() {
-    listaPokemones.innerHTML = "";
-    pokemones.forEach((pokemon) => {
-        const pokemonItem = document.createElement("li");
-        pokemonItem.textContent = `${pokemon.nombre} (${pokemon.estado})`;
-        pokemonItem.dataset.id = pokemon.id;
-        pokemonItem.className = "list-group-item";
-        listaPokemones.appendChild(pokemonItem);
+function asignarPokemon(enfermeraId) {
+    alert(`¡Pokémon asignado a la enfermera con ID: ${enfermeraId}!`);
+}
+
+function cargarPokemonesPendientes() {
+    const pokemonesList = document.getElementById('pokemones');
+
+    const pokemonesPendientes = [
+        { id: 1, nombre: 'Pikachu', estado: 'herido' },
+        { id: 2, nombre: 'Charmander', estado: 'envenenado' },
+        { id: 3, nombre: 'Squirtle', estado: 'cansado' },
+        { id: 4, nombre: 'Bulbasaur', estado: 'paralizado' },
+        { id: 5, nombre: 'Eevee', estado: 'herido' },
+        { id: 6, nombre: 'Jigglypuff', estado: 'dormido' }
+    ];
+
+    pokemonesPendientes.forEach(pokemon => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+                <span>${pokemon.nombre} (${pokemon.estado})</span>
+                <button class="marcar-atendido" onclick="marcarAtendido(${pokemon.id})">Atender</button>
+            `;
+        pokemonesList.appendChild(li);
     });
 }
 
-function asignarPokemon() {
-    const enfermeraDisponible = enfermeras.find((e) => e.disponible);
-    const pokemonHerido = pokemones.find((p) => p.estado !== "Curado");
-
-    if (!enfermeraDisponible) {
-        alert("No hay enfermeras disponibles en este momento.");
-        return;
-    }
-
-    if (!pokemonHerido) {
-        alert("No hay Pokémon que necesiten atención.");
-        return;
-    }
-
-    enfermeraDisponible.disponible = false;
-    pokemonHerido.estado = "Curado";
-
-    alert(`${enfermeraDisponible.nombre} está cuidando de ${pokemonHerido.nombre}.`);
-
-    renderEnfermeras();
-    renderPokemones();
-
-    setTimeout(() => {
-        enfermeraDisponible.disponible = true;
-        renderEnfermeras();
-    }, 5000);
+function marcarAtendido(pokemonId) {
+    alert(`¡Pokémon con ID ${pokemonId} marcado como atendido!`);
 }
-
-function init() {
-    renderEnfermeras();
-    renderPokemones();
-    btnAsignar.addEventListener("click", asignarPokemon);
-}
-
-document.addEventListener("DOMContentLoaded", init);
