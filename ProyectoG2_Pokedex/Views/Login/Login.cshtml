@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+<link href="~/css/login.css" rel="stylesheet" />
+<div class="container">
+    <div class="text-center">
+        <img src="~/images/logopokemon1.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
+    </div>
+    <ol id="Login"></ol>
+</div>
+<div class="login-container">
+    <div class="login-header">
+        <img src="~/images/Login.png" alt="Pokémon Trading Card Game Online" class="Logo" />
+    </div>
+
+    <div class="login-form">
+        <form method="post" class="form">
+            <div class="form-group">
+                <label for="Username">Username:</label>
+                <input type="text" id="Username" name="Username" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label for="Password">Password:</label>
+                <input type="password" id="Password" name="Password" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="RememberUsername" name="RememberUsername" />
+                <label for="RememberUsername">Remember username</label>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="RememberLogin" name="RememberLogin" />
+                <label for="RememberLogin">Remember password</label>
+            </div>
+
+            <button type="submit" class="login-button">LOG IN</button>
+
+            <div class="forgot-password">
+                <a href="/forgot-password">Forgot login information?</a>
+            </div>
+        </form>
+    </div>
+    <div class="pokemon-characters">
+        <img src="~/images/login2.png" alt="login2" />
+    </div>
+</div>
