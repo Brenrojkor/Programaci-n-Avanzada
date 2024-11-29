@@ -1,11 +1,22 @@
 ﻿@{
-    ViewData["Title"] = "Atención de Enfermeria";
+    ViewData["Title"] = "Enfermería";
 }
+
+<script src="~/js/enfermeria.js"></script>
+
+<div class="text-center">
+    <img src="~/images/pokeenfermeria.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
+</div>
+
 <link rel="stylesheet" href="~/css/pokedex.css" />
 
 <div class="container">
-    <div class="text-center">
-        <img src="~/images/pokeenfermeria.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
-    </div>
+    <h2>Enfermería Pokedex</h2>
+    <h3>Enfermeras Disponibles</h3>
+    <ul id="lista-enfermeras" class="list-group mb-4"></ul>
+
+    <h3>Pókemones en Espera</h3>
+    <ul id="lista-pokemones" class="list-group mb-4"></ul>
+
+    <button id="btn-asignar" class="btn btn-primary">Asignar Pokémon</button>
 </div>
-<script src="~/js/enfermeria.js"></script>
