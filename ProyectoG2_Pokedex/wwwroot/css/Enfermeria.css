@@ -1,13 +1,4 @@
-﻿body {
-    font-family: 'Arial', sans-serif;
-    background: url('https://wallpapercave.com/wp/wp4605071.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #FFCC00;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
+﻿.container {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
