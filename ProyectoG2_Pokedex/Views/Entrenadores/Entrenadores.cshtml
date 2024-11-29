@@ -4,11 +4,25 @@
 
 <script src="~/js/entrenador.js"></script>
 
- <div class="text-center">
-     <img src="~/images/pokentrenadores.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
- </div>
+<div class="text-center">
+    <img src="~/images/pokentrenadores.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
+    <div class="entrenador-container">
+        <div class="entrenadores-list">
+            <h2>Entrenadores disponibles</h2>
+            <ul id="entrenadores"></ul> 
+            <br />
+            <input type="text" id="nuevoEntrenador" placeholder="Nombre del entrenador" />
+            <br />
+            <br />
+            <button class="add-btn"onclick="addTrainer()">Agregar Entrenador</button>
+            <button class="edit-btn" onclick="editTrainer()">Editar Entrenador</button>
+            <button class="delete-btn" onclick="deleteTrainer()">Elinimar Entrenador</button>
+        </div>
+    </div>
+</div>
 
-<link rel="stylesheet" href="~/css/pokedex.css" />
+
+
 
 
 
