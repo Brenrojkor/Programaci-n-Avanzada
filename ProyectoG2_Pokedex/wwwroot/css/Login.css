@@ -18,9 +18,9 @@
 }
 
     .login-header .logo {
-        max-width: 100%; /* Limita el ancho máximo */
-        height: auto; /* Mantiene la relación de aspecto */
-        margin: 0 auto; /* Centra la imagen */
+        max-width: 100%; 
+        height: auto; 
+        margin: 0 auto; 
         object-fit: contain;
     }
 
