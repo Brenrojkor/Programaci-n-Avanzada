@@ -3,33 +3,11 @@
 }
 
 <link rel="stylesheet" href="~/css/site.css" />
-<link rel="stylesheet" href="~/css/Enfermeria.css" />
 
 <div class="text-center">
     <img src="~/images/pokeenfermeria.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
-    <div class="enfermeria-container">
-        <div class="enfermeras-list">
-            <h2>Enfermeras Disponibles</h2>
-            <input type="text" id="nuevaEnfermera" placeholder="Nueva enfermera" />
-            <button onclick="crearEnfermera()">Agregar Enfermera</button>
-            <br /><br />
-            <ul id="enfermeras"></ul>
-        </div>
-        <div class="pokemones-pendientes">
-            <h2>Pokémones Pendientes de Atención</h2>
-            <input type="text" id="nuevoPokemon" placeholder="Nombre del Pokémon" />
-            <select id="estadoPokemon">
-                <option value="herido">Herido</option>
-                <option value="envenenado">Envenenado</option>
-                <option value="cansado">Cansado</option>
-                <option value="paralizado">Paralizado</option>
-                <option value="dormido">Dormido</option>
-            </select>
-            <button onclick="crearPokemon()">Agregar Pokémon</button>
-            <br /><br />
-            <ul id="pokemones-pendientes"></ul>
-        </div>
+    <h2 class="mb-4">Lista de Pokemons en Lista de Espera</h2>
+    <div id="pokemon-list">
+        <script src="~/js/enfermeria.js"></script>
     </div>
 </div>
-
-<script src="~/js/enfermeria.js"></script>

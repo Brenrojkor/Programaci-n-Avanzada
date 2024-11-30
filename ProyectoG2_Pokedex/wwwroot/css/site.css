@@ -235,3 +235,36 @@ button:hover {
     align-items: center;
     margin-top: 100px;
 }
+
+.pokemon-item {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heal-btn {
+    background-color: #ff7485;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .heal-btn:hover {
+        background-color: #ff4a65;
+    }
+
+.historial-entry {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #e8f5e9;
+}
