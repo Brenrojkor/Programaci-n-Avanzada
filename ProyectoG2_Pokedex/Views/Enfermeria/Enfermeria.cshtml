@@ -5,9 +5,18 @@
 <link rel="stylesheet" href="~/css/site.css" />
 
 <div class="text-center">
-    <img src="~/images/pokeenfermeria.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
-    <h2 class="mb-4">Lista de Pokemons en Lista de Espera</h2>
-    <div id="pokemon-list">
-        <script src="~/js/enfermeria.js"></script>
+    <img src="~/images/pokentrenadores.png" alt="Logo Pokemon" class="pokemon-logo mb-4" />
+    <div class="enfermeria-container">
+        <div class="pokemones-list">
+            <h2>Pokemones en la Enfermería</h2>
+            <ul id="pokemones"></ul>
+            <br />
+            <input type="text" id="nuevoPokemon" placeholder="Nombre del Pokemon" />
+            <br />
+            <br />
+            <button class="add-btn" onclick="addPokemon()">Ingresar Pokemon</button>
+        </div>
     </div>
 </div>
+
+<script src="~/js/enfermeria.js"></script>
