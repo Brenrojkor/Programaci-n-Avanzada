@@ -1,12 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ProyectoG2_Pokedex.Controllers;
+using ProyectoG2_Pokedex.Models;
 
 namespace ProyectoG2_Pokedex.Data
 {
-    public class PokedexDBContext : Controller
+    public class PokedexDBContext : DbContext
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public PokedexDBContext(DbContextOptions<PokedexDBContext> options)
+            : base(options) { }
+
     }
 }
