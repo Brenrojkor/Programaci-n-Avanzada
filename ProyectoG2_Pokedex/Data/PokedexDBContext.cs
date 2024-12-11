@@ -1,14 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ProyectoG2_Pokedex.Controllers;
+﻿using ProyectoG2_Pokedex.Controllers;
 using ProyectoG2_Pokedex.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProyectoG2_Pokedex.Data
 {
-    public class PokedexDBContext : DbContext
+    public class MinombredeconexionDbContext : DbContext
     {
-        public PokedexDBContext(DbContextOptions<PokedexDBContext> options)
-            : base(options) { }
+        public MinombredeconexionDbContext(DbContextOptions<MinombredeconexionDbContext> options)
+        : base(options) { }
+
+        public DbSet<RegistroModel> G2_Usuarios { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<RegistroModel>().ToTable("G2_Usuarios");
+        }
+
 
     }
 }

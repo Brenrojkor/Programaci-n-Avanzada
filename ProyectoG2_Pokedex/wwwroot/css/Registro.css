@@ -1,0 +1,98 @@
+﻿.registro-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #3d6cb5;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.registro-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+    .registro-header .logo {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+.registro-form {
+    margin-top: 15px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.registro-button {
+    background-color: #ffdf5e;
+    color: #000;
+    border: solid #3d6cb5;
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+    .registro-button:hover {
+        background-color: #e6b800;
+    }
+
+.forgot-password {
+    margin-top: 10px;
+}
+
+    .forgot-password a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+@media (max-width: 768px) {
+    .registro-container {
+        padding: 15px;
+        width: 95%;
+    }
+
+    .registro-header .logo {
+        max-width: 200px;
+    }
+
+    .registro-button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+.pokemon-characters {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+    .pokemon-characters img {
+        width: 100px;
+        margin: 0 10px;
+    }
