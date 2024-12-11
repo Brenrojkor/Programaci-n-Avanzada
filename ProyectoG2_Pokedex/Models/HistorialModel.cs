@@ -3,8 +3,9 @@
     public class HistorialModel
     {
         public int HistorialID { get; set; }
-        public int AtencionID { get; set; }
-        public DateTime FechaAtencion { get; set; }
-        public string DescripcionAtencion { get; set; }
+        public string NombrePokemon { get; set; }
+        public string NombreDueño { get; set; }
+        public string Padecimiento { get; set; }
+        public string Estado { get; set; }
     }
 }
