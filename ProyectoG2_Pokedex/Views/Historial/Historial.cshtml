@@ -8,26 +8,28 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<table class="historial-list">
-    <thead>
-        <tr>
-            <th>ID Historial</th>
-            <th>Nombre Pokémon</th>
-            <th>Nombre Dueño</th>
-            <th>Padecimiento</th>
-            <th>Estado</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var historial in Model)
-        {
+<div class="text-center">
+    <table class="historial-list">
+        <thead>
             <tr>
-                <td>@historial.HistorialID</td>
-                <td>@historial.NombrePokemon</td>
-                <td>@historial.NombreDueño</td>
-                <td>@historial.Padecimiento</td>
-                <td>@historial.Estado</td>
+                <th>ID Historial</th>
+                <th>Nombre Pokémon</th>
+                <th>Nombre Dueño</th>
+                <th>Padecimiento</th>
+                <th>Estado</th>
             </tr>
-        }
-    </tbody>
-</table>
+            </thead>
+            <tbody>
+                @foreach (var historial in Model)
+                {
+                    <tr>
+                        <td>@historial.HistorialID</td>
+                        <td>@historial.NombrePokemon</td>
+                        <td>@historial.NombreDueño</td>
+                        <td>@historial.Padecimiento</td>
+                        <td>@historial.Estado</td>
+                    </tr>
+                }
+            </tbody>
+    </table>
+</div>

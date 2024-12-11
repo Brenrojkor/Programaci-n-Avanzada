@@ -8,35 +8,37 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<table class="enfermeria-list">
-    <thead>
-        <tr>
-            <th>ID Atención</th>
-            <th>Nombre Pokémon</th>
-            <th>Nombre Dueño</th>
-            <th>Padecimiento</th>
-            <th>Estado</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var enfermeria in Model)
-        {
+<div class="text-center">
+    <table class="enfermeria-list">
+        <thead>
             <tr>
-                <td>@enfermeria.AtencionID</td>
-                <td>@enfermeria.NombrePokemon</td>
-                <td>@enfermeria.NombreDueño</td>
-                <td>@enfermeria.Padecimiento</td>
-                <td>@enfermeria.Estado</td>
-                <td style="text-align: center;">
-                    <form asp-action="CurarPokemon" method="post" style="display:inline;">
-                        <input type="hidden" name="atencionID" value="@enfermeria.AtencionID" />
-                        <button type="submit" class="btn btn-danger">Curar</button>
-                    </form>
-                </td>
+                <th>ID Atención</th>
+                <th>Nombre Pokémon</th>
+                <th>Nombre Dueño</th>
+                <th>Padecimiento</th>
+                <th>Estado</th>
+                <th>Acciones</th>
             </tr>
-        }
-    </tbody>
-</table>
+            </thead>
+            <tbody>
+                @foreach (var enfermeria in Model)
+                {
+                    <tr>
+                        <td>@enfermeria.AtencionID</td>
+                        <td>@enfermeria.NombrePokemon</td>
+                        <td>@enfermeria.NombreDueño</td>
+                        <td>@enfermeria.Padecimiento</td>
+                        <td>@enfermeria.Estado</td>
+                        <td style="text-align: center;">
+                            <form asp-action="CurarPokemon" method="post" style="display:inline;">
+                                <input type="hidden" name="atencionID" value="@enfermeria.AtencionID" />
+                                <button type="submit" class="btn btn-danger">Curar</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+    </table>
+</div>
 
 <a href="@Url.Action("IngresarPokemon", "Enfermeria")" class="btn btn-success">Ingresar Pokémon</a>
