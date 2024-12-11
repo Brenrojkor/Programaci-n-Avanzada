@@ -9,11 +9,11 @@ namespace ProyectoG2_Pokedex.Data
         public MinombredeconexionDbContext(DbContextOptions<MinombredeconexionDbContext> options)
         : base(options) { }
 
-        public DbSet<RegistroModel> G2_Usuarios { get; set; }
+        public DbSet<RegistroModel> G2_Usuario { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<RegistroModel>().ToTable("G2_Usuarios");
+            modelBuilder.Entity<RegistroModel>().ToTable("G2_Usuario");
         }
 
 

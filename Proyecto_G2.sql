@@ -7,8 +7,7 @@ CREATE TABLE G2_Usuario (
 	UsuarioID INT NOT NULL PRIMARY KEY,
     NombreUsuario VARCHAR(45) UNIQUE,
 	Contraseña  VARCHAR(80) NOT NULL,
-    NombreCompleto VARCHAR(100),
-    Rol VARCHAR(50)
+    NombreCompleto VARCHAR(100)
 );
 
 CREATE TABLE G2_Pokedex (

@@ -23,7 +23,7 @@ public class RegistroController : Controller
     {
         if (ModelState.IsValid)
         {
-            _context.G2_Usuarios.Add(new RegistroModel
+            _context.G2_Usuario.Add(new RegistroModel
             {
                 NombreUsuario = registro.NombreUsuario,
                 Contraseña = registro.Contraseña, 
