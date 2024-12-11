@@ -10,10 +10,12 @@ namespace ProyectoG2_Pokedex.Data
     : base(options) { }
 
         public DbSet<UsuariosModel> Usuarios { get; set; }
+        public DbSet<EnfermeriaModel> Enfermeria { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UsuariosModel>().ToTable("Usuarios");
+            modelBuilder.Entity<EnfermeriaModel>().ToTable("Enfermeria");
         }
     }
 }

@@ -1,16 +1,18 @@
+CREATE DATABASE POKEMON;
+
 -- Proyecto Progra Avanzada G2
-USE u484426513_pac324;
+USE POKEMON;
 
 /* HEAD */
 
-CREATE TABLE G2_Usuario (
+CREATE TABLE Usuarios (
 	UsuarioID INT NOT NULL PRIMARY KEY,
     NombreUsuario VARCHAR(45) UNIQUE,
 	Contraseña  VARCHAR(80) NOT NULL,
     NombreCompleto VARCHAR(100)
 );
 
-CREATE TABLE G2_Pokedex (
+CREATE TABLE Pokedex (
     PokedexID INT PRIMARY KEY,
     NombrePokemon VARCHAR(50) NOT NULL,
     Tipo VARCHAR(50),
@@ -23,7 +25,7 @@ CREATE TABLE G2_Pokedex (
 
 /* Brenda */
 
-CREATE TABLE G2_Entrenadores (
+CREATE TABLE Entrenadores (
 	EntrnadorPokemonID INT PRIMARY KEY,
 	NombreEntrenador VARCHAR(100),
     NombreEquipo VARCHAR(100),
@@ -31,7 +33,7 @@ CREATE TABLE G2_Entrenadores (
 	Estado VARCHAR(50)
 );
 
-CREATE TABLE G2_Equipos (
+CREATE TABLE Equipos (
 	EquipoID INT PRIMARY KEY,
     NombreEquipo VARCHAR(100),
 	UsuarioID INT,
@@ -40,7 +42,7 @@ CREATE TABLE G2_Equipos (
 
 /* Paola */
 
-CREATE TABLE G2_Retos (
+CREATE TABLE Retos (
     RetoID INT PRIMARY KEY,
     EntrenadorRetadorID INT,
     EntrenadorRetadoID INT,
@@ -51,7 +53,7 @@ CREATE TABLE G2_Retos (
     CONSTRAINT fk_entrenador_retado FOREIGN KEY (EntrenadorRetadoID) REFERENCES G2_Usuario(UsuarioID)
 );
 
-CREATE TABLE G2_Mensajes (
+CREATE TABLE Mensajes (
     MensajeID INT PRIMARY KEY,
     UsuarioOrigenID INT,
     UsuarioDestinoID INT,
@@ -63,15 +65,15 @@ CREATE TABLE G2_Mensajes (
 
 /* Jose */
 
-CREATE TABLE G2_Enfermeria (
-	AtencionID INT PRIMARY KEY,
+CREATE TABLE Enfermeria (
+	AtencionID INT PRIMARY KEY AUTO_INCREMENT,
     NombrePokemon VARCHAR(100),
     NombreDueño VARCHAR(100),
     Padecimiento VARCHAR(100),
     Estado VARCHAR(100)
 );
 
-CREATE TABLE G2_Historial (
+CREATE TABLE Historial (
 	HistorialID INT PRIMARY KEY,
     NombrePokemon VARCHAR(100),
     NombreDueño VARCHAR(100),
@@ -80,3 +82,11 @@ CREATE TABLE G2_Historial (
 );
 
 /* Cristopher */
+
+
+INSERT INTO Enfermeria (AtencionID, NombrePokemon, NombreDueño, Padecimiento, Estado) VALUES
+	('1', 'Pikachu', 'Ash Ketchum', 'Lesionado', 'Recuperado'),
+	('2', 'Charmeleon', 'Ash Ketchum', 'Quemado', 'Pendiente'),
+	('3', 'Squirtle', 'Ash Ketchum', 'Ahogado', 'Recuperado');
+    
+SELECT * FROM Enfermeria;
