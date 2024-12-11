@@ -6,10 +6,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("Minombredeconexion");
 
-
 builder.Services.AddDbContext<MinombredeconexionDbContext>(options =>
-    options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 21)))
-);
+    options.UseMySql(
+        connectionString,
+        ServerVersion.AutoDetect(connectionString) // Detecta la versión del servidor MySQL automáticamente
+    ));
 
 
 builder.Services.AddControllersWithViews();
