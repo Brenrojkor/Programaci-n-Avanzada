@@ -235,3 +235,47 @@ button:hover {
     align-items: center;
     margin-top: 100px;
 }
+
+.enfermeria-list thead {
+    width: 45%;
+    padding: 20px;
+    background-color: #000000d9;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 10px solid #3d6cb5;
+}
+
+.enfermeria-list tbody {
+    background-color: white;
+}
+
+.enfermeria-list th {
+    text-align: center;
+}
+
+.enfermeria-list td {
+    text-align: left;
+}
+
+.historial-list thead {
+    width: 45%;
+    padding: 20px;
+    background-color: #000000d9;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 10px solid #3d6cb5;
+}
+
+.historial-list tbody {
+    background-color: white;
+}
+
+.historial-list th {
+    text-align: center;
+}
+
+.historial-list td {
+    text-align: left;
+}

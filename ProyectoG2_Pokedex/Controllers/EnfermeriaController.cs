@@ -38,12 +38,21 @@ namespace ProyectoG2_Pokedex.Controllers
         }
 
         [HttpPost]
-        public IActionResult CurarPokemon(int atencionID)
+        public IActionResult CurarPokemon(int atencionID, [FromServices] HistorialController historial)
         {
-            var alta = enfermeria.FirstOrDefault(e => e.AtencionID == atencionID);
-            if (alta != null)
+            var pokemon = enfermeria.FirstOrDefault(e => e.AtencionID == atencionID);
+            if (pokemon != null)
             {
-                enfermeria.Remove(alta);
+                pokemon.Estado = "Curado";
+                historial.AgregarHistorial(new HistorialModel
+                {
+                    HistorialID = pokemon.AtencionID,
+                    NombrePokemon = pokemon.NombrePokemon,
+                    NombreDueño = pokemon.NombreDueño,
+                    Padecimiento = pokemon.Padecimiento,
+                    Estado = pokemon.Estado
+                });
+                enfermeria.Remove(pokemon);
             }
             return RedirectToAction("Enfermeria");
         }
