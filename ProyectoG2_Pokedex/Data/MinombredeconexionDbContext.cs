@@ -16,6 +16,7 @@ namespace ProyectoG2_Pokedex.Data
         {
             modelBuilder.Entity<UsuariosModel>().ToTable("Usuarios");
             modelBuilder.Entity<EnfermeriaModel>().ToTable("Enfermeria");
+            modelBuilder.Entity<EnfermeriaModel>().HasKey(e => e.AtencionID);
         }
     }
 }

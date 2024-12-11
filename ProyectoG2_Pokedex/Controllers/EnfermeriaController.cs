@@ -53,20 +53,35 @@ namespace ProyectoG2_Pokedex.Controllers
             return View();
         }
 
+
         // Agregar un Pokémon a la Enfermería
         [HttpPost]
         public IActionResult Agregar(EnfermeriaModel nuevoPokemon)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState.Values.SelectMany(v => v.Errors);
+                foreach (var error in errors)
+                {
+                    Console.WriteLine("ModelState Error: " + error.ErrorMessage);
+                }
+                return View(nuevoPokemon);
+            }
+
+            try
             {
                 nuevoPokemon.Estado = "Pendiente"; // Estado predeterminado
                 _context.Enfermeria.Add(nuevoPokemon);
-                _context.SaveChanges(); // Guarda los cambios en la base de datos
-                return RedirectToAction("Enfermeria"); // Redirige a la vista principal
+                _context.SaveChanges();
+                return RedirectToAction("Enfermeria");
             }
-            return View(nuevoPokemon);
+            catch (Exception ex)
+            {
+                Console.WriteLine("Database Error: " + ex.Message);
+                ModelState.AddModelError("", "Ocurrió un error al guardar los datos en la base de datos.");
+                return View(nuevoPokemon);
+            }
         }
-
     }
 }
 
