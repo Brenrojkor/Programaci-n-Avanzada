@@ -7,12 +7,19 @@ namespace ProyectoG2_Pokedex.Models
         [Key]
         public int IdUsuario { get; set; }
 
-        public string Usuario { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string? Usuario { get; set; }
 
-        public string NombreUsuario { get; set; }
+        [Required]
+        [MaxLength(100)]
+        public string? NombreUsuario { get; set; }
 
-        public string Contrasena { get; set; }
+        [Required]
+        [MaxLength(255)]
+        public string? Contrasena { get; set; }
 
-        public string Rol { get; set; }
+        [Required]
+        public string? Rol { get; set; }
     }
 }
