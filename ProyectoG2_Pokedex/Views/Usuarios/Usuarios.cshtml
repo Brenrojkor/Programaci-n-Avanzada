@@ -1,5 +1,31 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model IEnumerable<ProyectoG2_Pokedex.Models.UsuariosModel>
+
+<h2>Usuarios</h2>
+<table class="tabla-usuarios">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Usuario</th>
+            <th>Nombre</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.IdUsuario</td>
+                <td>@usuario.Usuario</td>
+                <td>@usuario.NombreUsuario</td>
+                <td>@usuario.Rol</td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@usuario.IdUsuario" class="btn btn-primary">Editar</a>
+                    <a asp-action="Eliminar" asp-route-id="@usuario.IdUsuario" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="Agregar" class="btn btn-success">Agregar Nuevo Usuario</a>
+
