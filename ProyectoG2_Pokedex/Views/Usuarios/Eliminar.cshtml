@@ -1,0 +1,24 @@
+﻿@model ProyectoG2_Pokedex.Models.UsuariosModel
+<link href="~/css/crudusuarios.css" rel="stylesheet" /><link href="~/css/crudusuarios.css" rel="stylesheet" />
+<div class="pokedex-container">
+    <h1 class="title">Eliminar Usuario</h1>
+    <p>¿Estás seguro de que deseas eliminar el siguiente usuario?</p>
+    <div>
+        <dl class="row">
+            <dt>Usuario</dt>
+            <dd>@Model.Usuario</dd>
+            <dt>Nombre Completo</dt>
+            <dd>@Model.NombreUsuario</dd>
+            <dt>Rol</dt>
+            <dd>@Model.Rol</dd>
+        </dl>
+    </div>
+    <form asp-action="Eliminar" method="post">
+        <input type="hidden" asp-for="IdUsuario" />
+        <button type="submit" class="btn btn-delete">Eliminar</button>
+        <a asp-action="Usuarios" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+
+
+

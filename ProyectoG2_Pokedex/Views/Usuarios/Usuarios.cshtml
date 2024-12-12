@@ -1,7 +1,10 @@
 ﻿@model IEnumerable<ProyectoG2_Pokedex.Models.UsuariosModel>
+<link href="~/css/crudusuarios.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-<h2>Usuarios</h2>
-<table class="tabla-usuarios">
+<div class="pokedex-container">
+<h1 class="title">Gestionar Usuarios</h1>
+<table class="table">
     <thead>
         <tr>
             <th>Id</th>
@@ -20,12 +23,13 @@
                 <td>@usuario.NombreUsuario</td>
                 <td>@usuario.Rol</td>
                 <td>
-                    <a asp-action="Editar" asp-route-id="@usuario.IdUsuario" class="btn btn-primary">Editar</a>
-                    <a asp-action="Eliminar" asp-route-id="@usuario.IdUsuario" class="btn btn-danger">Eliminar</a>
+                        <a asp-action="Editar" asp-route-id="@usuario.IdUsuario" class="btn btn-edit">Editar</a>
+                        <a asp-action="Eliminar" asp-route-id="@usuario.IdUsuario" class="btn btn-delete">Eliminar</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
-<a asp-action="Agregar" class="btn btn-success">Agregar Nuevo Usuario</a>
+<a asp-action="Agregar" class="btn btn-add">Agregar Nuevo Usuario</a>
+</div>
 

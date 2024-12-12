@@ -1,69 +1,20 @@
-CREATE DATABASE POKEMON;
+-- Crear la base de datos
+CREATE DATABASE IF NOT EXISTS Pokemon;
 
--- Proyecto Progra Avanzada G2
-USE POKEMON;
+-- Usar la base de datos creada
+USE Pokemon;
 
-/* HEAD */
-
+-- Crear la tabla Usuarios
 CREATE TABLE Usuarios (
-	UsuarioID INT NOT NULL PRIMARY KEY,
-    NombreUsuario VARCHAR(45) UNIQUE,
-	Contraseña  VARCHAR(80) NOT NULL,
-    NombreCompleto VARCHAR(100)
+    IdUsuario INT AUTO_INCREMENT PRIMARY KEY, -- Identificador único
+    Usuario VARCHAR(50) NOT NULL,             -- Nombre de usuario
+    NombreUsuario VARCHAR(100) NOT NULL,             -- Nombre completo del usuario
+    Contrasena VARCHAR(255) NOT NULL,         -- Contraseña (encriptar en la aplicación para seguridad)
+    Rol ENUM('Admin', 'Entrenador', 'Enfermera') NOT NULL -- Rol del usuario con valores predefinidos
 );
 
-CREATE TABLE Pokedex (
-    PokedexID INT PRIMARY KEY,
-    NombrePokemon VARCHAR(50) NOT NULL,
-    Tipo VARCHAR(50),
-    Debilidad VARCHAR(50),
-    EvolucionID INT,
-    Peso DECIMAL(5,2),
-    Numero INT,
-    FOREIGN KEY (EvolucionID) REFERENCES G2_Pokedex(PokedexID)
-);
-
-/* Brenda */
-
-CREATE TABLE Entrenadores (
-	EntrnadorPokemonID INT PRIMARY KEY,
-	NombreEntrenador VARCHAR(100),
-    NombreEquipo VARCHAR(100),
-	Nivel INT,
-	Estado VARCHAR(50)
-);
-
-CREATE TABLE Equipos (
-	EquipoID INT PRIMARY KEY,
-    NombreEquipo VARCHAR(100),
-	UsuarioID INT,
-	FOREIGN KEY (UsuarioID) REFERENCES G2_Usuario(UsuarioID)
-);
-
-/* Paola */
-
-CREATE TABLE Retos (
-    RetoID INT PRIMARY KEY,
-    EntrenadorRetadorID INT,
-    EntrenadorRetadoID INT,
-    EstadoReto VARCHAR(10) CHECK (EstadoReto IN ('Pendiente', 'Aceptado', 'Rechazado', 'Finalizado')),
-    FechaReto DATE,
-    FechaFinalizacion DATE,
-    CONSTRAINT fk_entrenador_retador FOREIGN KEY (EntrenadorRetadorID) REFERENCES G2_Usuario(UsuarioID),
-    CONSTRAINT fk_entrenador_retado FOREIGN KEY (EntrenadorRetadoID) REFERENCES G2_Usuario(UsuarioID)
-);
-
-CREATE TABLE Mensajes (
-    MensajeID INT PRIMARY KEY,
-    UsuarioOrigenID INT,
-    UsuarioDestinoID INT,
-    Contenido VARCHAR(1000),
-    FechaEnvio DATE DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT fk_usuario_origen FOREIGN KEY (UsuarioOrigenID) REFERENCES G2_Usuario(UsuarioID),
-    CONSTRAINT fk_usuario_destino FOREIGN KEY (UsuarioDestinoID) REFERENCES G2_Usuario(UsuarioID)
-);
-
-/* Jose */
+INSERT INTO Usuarios (Usuario, NombreUsuario, Contrasena, Rol)
+VALUES ('Jose1', 'JoseA', '123', 'Entrenador');
 
 CREATE TABLE Enfermeria (
 	AtencionID INT PRIMARY KEY AUTO_INCREMENT,
@@ -73,20 +24,19 @@ CREATE TABLE Enfermeria (
     Estado VARCHAR(100)
 );
 
-CREATE TABLE Historial (
-	HistorialID INT PRIMARY KEY,
-    NombrePokemon VARCHAR(100),
-    NombreDueño VARCHAR(100),
-    Padecimiento VARCHAR(100),
-    Estado VARCHAR(100)
+INSERT INTO Enfermeria (NombrePokemon, NombreDueño, Padecimiento, Estado)
+VALUES ('Pikachu', 'Ash', 'Fatiga', 'Pendiente');
+
+select * FROM Enfermeria;
+select * FROM Usuarios;
+select * FROM Mensajes;
+
+-- Crear la tabla Mensajes
+CREATE TABLE Mensajes (
+    IdMensaje INT AUTO_INCREMENT PRIMARY KEY, -- Identificador único del mensaje
+    IdUsuario INT NOT NULL,                  -- ID del usuario que envía el mensaje
+    Mensaje TEXT NOT NULL,                   -- Contenido del mensaje
+    Fecha DATETIME DEFAULT CURRENT_TIMESTAMP, -- Fecha y hora del mensaje
+    FOREIGN KEY (IdUsuario) REFERENCES Usuarios(IdUsuario) -- Relación con la tabla Usuarios
 );
 
-/* Cristopher */
-
-
-INSERT INTO Enfermeria (AtencionID, NombrePokemon, NombreDueño, Padecimiento, Estado) VALUES
-	('1', 'Pikachu', 'Ash Ketchum', 'Lesionado', 'Recuperado'),
-	('2', 'Charmeleon', 'Ash Ketchum', 'Quemado', 'Pendiente'),
-	('3', 'Squirtle', 'Ash Ketchum', 'Ahogado', 'Recuperado');
-    
-SELECT * FROM Enfermeria;

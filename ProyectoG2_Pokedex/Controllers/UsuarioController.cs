@@ -55,9 +55,9 @@ namespace ProyectoG2_Pokedex.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Editar(int id, UsuariosModel usuario)
+        public IActionResult Editar(int id, UsuariosModel usuarioEditado)
         {
-            if (id != usuario.IdUsuario)
+            if (id != usuarioEditado.IdUsuario)
             {
                 return NotFound();
             }
@@ -66,7 +66,7 @@ namespace ProyectoG2_Pokedex.Controllers
             {
                 try
                 {
-                    _context.Update(usuario);
+                    _context.Update(usuarioEditado);
                     _context.SaveChanges();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -82,7 +82,7 @@ namespace ProyectoG2_Pokedex.Controllers
                 }
                 return RedirectToAction(nameof(Usuarios));
             }
-            return View(usuario);
+            return View(usuarioEditado);
         }
 
         public IActionResult Eliminar(int? id)
