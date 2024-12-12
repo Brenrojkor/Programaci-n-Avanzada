@@ -1,15 +1,19 @@
 ﻿.registro-container {
+    font-family: 'Press Start 2P', sans-serif;
     text-align: center;
     padding: 20px;
-    background-color: #3d6cb5;
+    background-color: #000000d6;
     border-radius: 10px;
     width: 90%;
     max-width: 400px;
-    margin: 20px auto;
+    margin: 60px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .registro-header {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.9em; /* Ajusta el tamaño de la fuente */
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +30,7 @@
 
 .registro-form {
     margin-top: 15px;
-    background-color: #fff;
+    background-color: #ffffffd9;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -46,9 +50,9 @@
 }
 
 .registro-button {
-    background-color: #ffdf5e;
-    color: #000;
-    border: solid #3d6cb5;
+    background-color: #d00000d9;
+    color: #fff;
+    border: solid #fff;
     padding: 15px;
     font-size: 16px;
     width: 100%;
@@ -58,7 +62,7 @@
 }
 
     .registro-button:hover {
-        background-color: #e6b800;
+        background-color: #000000e1;
     }
 
 .forgot-password {
@@ -93,6 +97,5 @@
 }
 
     .pokemon-characters img {
-        width: 100px;
-        margin: 0 10px;
+        height: 150px; 
     }

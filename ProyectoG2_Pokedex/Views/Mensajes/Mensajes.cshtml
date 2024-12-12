@@ -4,8 +4,9 @@
     var mensajes = ViewBag.Mensajes as IEnumerable<dynamic>;
 }
 
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 <div class="text-center">
-    <img src="~/images/mensajepoke.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
     <div class="phone-simulator">
         <div class="phone-header">Mensajes</div>
         <div class="phone-body" id="mensajes-container">
@@ -45,6 +46,7 @@
             margin: 0; /* Elimina cualquier margen predeterminado del form */
         }
     .message-bubble {
+            font-family: 'Press Start 2P', sans-serif;
             max-width: 80%;
             margin: 5px 0;
             padding: 10px;
@@ -57,12 +59,12 @@
 
         .message-bubble strong {
             display: block;
-            font-size: 1em;
+            font-size: 0.8em;
             margin-bottom: 5px;
         }
 
         .message-time {
-            font-size: 0.75em; /* Muy pequeño para la fecha y hora */
+            font-size: 0.5em; /* Muy pequeño para la fecha y hora */
             color: gray;
             margin-top: 5px;
             text-align: right;

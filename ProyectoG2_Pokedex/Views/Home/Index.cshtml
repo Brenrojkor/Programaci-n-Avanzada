@@ -2,13 +2,14 @@
     ViewData["Title"] = "Login";
 }
 <link href="~/css/login.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <div class="container">
-    <div class="login-header">
-        <img src="~/images/pokeini.png" alt="Pokémon Trading Card Game Online" class="Logo" />
-    </div>
     <ol id="Login"></ol>
 </div>
 <div class="login-container">
+    <div class="login-header">
+        <p>LOGIN</p>
+    </div>
     <div class="login-form">
         <form asp-controller="Login" asp-action="Login" method="post" class="form">
             <div class="form-group">
@@ -39,6 +40,6 @@
         </form>
     </div>
     <div class="pokemon-characters">
-        <img src="~/images/login2.png" alt="login2" />
+        <img src="~/images/001.png" alt="login2" />
     </div>
 </div>

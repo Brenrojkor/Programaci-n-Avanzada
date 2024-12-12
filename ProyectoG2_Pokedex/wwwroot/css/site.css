@@ -17,9 +17,40 @@ html {
   min-height: 100%;
 }
 
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 80% de transparencia */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Fondo negro con 80% de transparencia */
+    margin: 0;
+    border: none; /* Asegúrate de que no haya bordes */
+    box-shadow: none; /* Elimina cualquier sombra */
+}
+
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Hace el ícono del toggler visible sobre el fondo oscuro */
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.2em; /* Ajusta el tamaño de la fuente */
+    color: white !important; /* Asegúrate de que el color sea visible */
+}
+
+.border-bottom {
+    border-bottom: 1px solid #000000d3 !important;
+}
+
 body {
+    margin: 0;
+    padding: 0;
     margin-bottom: 60px;
-    background-image: url('../images/fondomensajes2.jpg');
+    background-image: url('../images/pokeball.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -30,20 +61,20 @@ body {
 .phone-simulator {
     width: 400px;
     height: 700px;
-    margin: 0 auto;
+    margin: 80px auto;
     border: 5px solid black;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    background-color: white;
-    overflow: hidden; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 
 .phone-header {
+    font-family: 'Press Start 2P', sans-serif;
     height: 50px;
-    background-color: #000000;
+    background-color: #cf001fe3;
     color: white;
     display: flex;
     align-items: center;
@@ -55,18 +86,14 @@ body {
 }
 
 .phone-body {
+    font-family: 'Press Start 2P', sans-serif;
     flex: 1;
     padding: 10px;
     overflow-y: auto;
     display: flex;
-    background-color: #ff7485;
+    background-color: #000000e7;
     flex-direction: column;
     gap: 10px;
-    background-image: url('../images/pikachu.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-attachment: local;
-    background-position: center;
 }
 
 .message {
@@ -90,37 +117,40 @@ body {
     }
 
 .phone-footer {
+    font-family: 'Press Start 2P', sans-serif;
     display: flex;
     padding: 15px;
     gap: 5px;
     border-top: 1px solid black;
-    background-color: #000000;
+    background-color: #cf001fe3;
     border-bottom-left-radius: 23px;
     border-bottom-right-radius: 23px;
 }
 
 .message-input {
     flex: 1;
+    height: 50px;
     padding: 10px;
     border: 3px solid;
     border-radius: 20px;
-    font-size: 14px;
-    background-color: #fed500;
+    font-size: 10px;
+    background-color: #dededeee;
 }
 
 .send-button {
-    background-color: #ff7485;
-    color: white;
+    background-color: #fed500;
+    height: 50px;
+    color: black;
     border: none;
     padding: 10px 15px;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
     .send-button:hover {
-        background-color: #ff4a65;
+        background-color: #cf001fe3;
     }
 
 .retos-container {
