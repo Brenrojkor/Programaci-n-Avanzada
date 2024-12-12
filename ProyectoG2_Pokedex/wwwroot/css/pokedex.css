@@ -1,8 +1,11 @@
 ﻿.container {
+    font-family: 'Press Start 2P', sans-serif;
     text-align: center;
+    justify-content: center;
     padding: 20px;
 }
 #pokedex {
+    font-family: 'Press Start 2P', sans-serif;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +14,8 @@
 }
 
 .card {
-    background: #fff;
+    font-family: 'Press Start 2P', sans-serif;
+    background: #000000e4;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
@@ -21,19 +25,23 @@
 }
 
 .card-image {
-    width: 100px;
-    height: 100px;
+    height: 150px;
 }
 
 .card-title {
-    font-size: 18px;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 14px;
     font-weight: bold;
+    color: white;
 }
 
 .card-subtitle {
-    color: #666;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 10px;
+    color: #f00;
 }
 .button {
+    font-family: 'Press Start 2P', sans-serif;
     margin: 5px;
     padding: 10px;
     background-color: #007bff;
@@ -42,3 +50,97 @@
     cursor: pointer;
 }
 
+.logo-container {
+    display: flex; /* Usamos Flexbox para centrar */
+    justify-content: center; /* Alinea horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+}
+
+.pokemon-logo {
+    max-width: 100%; /* Asegura que el logo no exceda el ancho del contenedor */
+    height: auto; /* Mantiene las proporciones */
+}
+
+/* Contenedor general */
+.pokedex-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Negro con 70% de transparencia */
+    color: white; /* Letras blancas */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+    /* Encabezado del título */
+    .pokedex-container .title {
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+/* Tabla */
+.table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    color: white
+}
+
+    .table th, .table td {
+        padding: 10px;
+        border: 1px solid white; /* Borde blanco */
+    }
+
+    .table th {
+        font-size: 1.1em;
+        text-transform: uppercase;
+    }
+
+.pokemon-img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Botones */
+.btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Botones Editar */
+.btn-edit {
+    background-color: rgba(208, 0, 0, 0.8); /* Rojo con 80% de transparencia */
+    color: white;
+}
+
+    .btn-edit:hover {
+        background-color: rgba(150, 0, 0, 0.9);
+    }
+
+/* Botones Eliminar */
+.btn-delete {
+    background-color: rgba(208, 0, 0, 0.8); /* Rojo con 80% de transparencia */
+    color: white;
+}
+
+    .btn-delete:hover {
+        background-color: rgba(150, 0, 0, 0.9);
+    }
+
+/* Botón Agregar */
+.btn-add {
+    background-color: rgba(208, 0, 0, 0.8); /* Rojo con 80% de transparencia */
+    color: white;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 12px 20px;
+}
+
+    .btn-add:hover {
+        background-color: rgba(150, 0, 0, 0.9);
+    }

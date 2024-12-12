@@ -4,10 +4,11 @@
 
 <link rel="stylesheet" href="~/css/pokedex.css" />
 <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
 <div class="container">
-    <div class="text-center">
-        <img src="~/images/pokede.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
+    <div class="text-center logo-container">
+        <img src="~/images/dexpoke.png" alt="Logo Pokémon" class="pokemon-logo" />
     </div>
     <ol id="pokedex"></ol>
 </div>
@@ -15,8 +16,8 @@
 <script src="~/js/pokedex.js"></script>
 
 <!-- Sección CRUD -->
-<div class="container mt-5" style="background-color: white; padding: 20px; border-radius: 10px;">
-    <h1 class="title text-center">Crud Pokémon</h1>
+<div class="container mt-5 pokedex-container">
+    <h1 class="title text-center">Gestionar Pokedex</h1>
     <main>
         <div class="table-content">
             <table class="table" id="table-list">
@@ -30,26 +31,35 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur" style="width:50px;height:50px;"></td>
+                        <td><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur" class="pokemon-img"></td>
                         <td>Bulbasaur</td>
                         <td>Grass, Poison</td>
-                        <td><button class="btn btn-edit" style="background-color: blue; color: white;">Edit</button> <button class="btn btn-delete" style="background-color: yellow; color: black;">Delete</button></td>
+                        <td>
+                            <button class="btn btn-edit">Edit</button>
+                            <button class="btn btn-delete">Delete</button>
+                        </td>
                     </tr>
                     <tr>
-                        <td><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander" style="width:50px;height:50px;"></td>
+                        <td><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander" class="pokemon-img"></td>
                         <td>Charmander</td>
                         <td>Fire</td>
-                        <td><button class="btn btn-edit" style="background-color: blue; color: white;">Edit</button> <button class="btn btn-delete" style="background-color: yellow; color: black;">Delete</button></td>
+                        <td>
+                            <button class="btn btn-edit">Edit</button>
+                            <button class="btn btn-delete">Delete</button>
+                        </td>
                     </tr>
                     <tr>
-                        <td><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle" style="width:50px;height:50px;"></td>
+                        <td><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle" class="pokemon-img"></td>
                         <td>Squirtle</td>
                         <td>Water</td>
-                        <td><button class="btn btn-edit" style="background-color: blue; color: white;">Edit</button> <button class="btn btn-delete" style="background-color: yellow; color: black;">Delete</button></td>
+                        <td>
+                            <button class="btn btn-edit">Edit</button>
+                            <button class="btn btn-delete">Delete</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
-            <button class="btn btn-add" id="add" style="background-color: blue; color: white;"><span class="fas fa-plus"></span> Add Pokémon</button>
+            <button class="btn btn-add" id="add"><span class="fas fa-plus"></span> Add Pokémon</button>
         </div>
     </main>
 </div>
