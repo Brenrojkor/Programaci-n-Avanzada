@@ -2,40 +2,46 @@
 
 <h2>Enfermería</h2>
 
-<table class="tabla-enfermeria">
-    <thead>
-        <tr>
-            <th>Nombre del Pokémon</th>
-            <th>Nombre del Dueño</th>
-            <th>Padecimiento</th>
-            <th>Estado</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var pokemon in Model)
-        {
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-info">
+        @TempData["Mensaje"]
+    </div>
+}
+
+<div class="enfermeria-container">
+    <table class="tabla-enfermeria">
+        <thead>
             <tr>
-                <td>@pokemon.NombrePokemon</td>
-                <td>@pokemon.NombreDueño</td>
-                <td>@pokemon.Padecimiento</td>
-                <td>@pokemon.Estado</td>
-                <td>
-                    <form asp-action="Curar" method="post" style="display:inline;">
-                        <input type="hidden" name="id" value="@pokemon.AtencionID" />
-                        <button class="btn btn-success" type="submit">Curar</button>
-                    </form>
-                    <form asp-action="Eliminar" method="post" style="display:inline;">
-                        <input type="hidden" name="id" value="@pokemon.AtencionID" />
-                        <button class="btn btn-danger" type="submit">Eliminar</button>
-                    </form>
-                </td>
+                <th>Pokémon</th>
+                <th>Dueño</th>
+                <th>Padecimiento</th>
+                <th>Estado</th>
+                <th>Acciones</th>
             </tr>
-        }
-    </tbody>
-</table>
-
+        </thead>
+        <tbody>
+            @foreach (var pokemon in Model)
+            {
+                <tr>
+                    <td>@pokemon.NombrePokemon</td>
+                    <td>@pokemon.NombreDueño</td>
+                    <td>@pokemon.Padecimiento</td>
+                    <td>@pokemon.Estado</td>
+                    <td>
+                        <form asp-action="Curar" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="@pokemon.AtencionID" />
+                            <button class="btn btn-success" type="submit">Curar</button>
+                        </form>
+                        <form asp-action="Eliminar" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="@pokemon.AtencionID" />
+                            <button class="btn btn-danger" type="submit">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 <br />
-
 <a asp-action="Agregar" class="btn btn-primary">Agregar Pokémon</a>
-

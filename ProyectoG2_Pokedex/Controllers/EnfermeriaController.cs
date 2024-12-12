@@ -14,27 +14,37 @@ namespace ProyectoG2_Pokedex.Controllers
             _context = context;
         }
 
-        // Listar Pokémones en Enfermería
         public IActionResult Enfermeria()
         {
             var pokemones = _context.Enfermeria.ToList();
             return View(pokemones);
         }
 
-        // Actualizar estado a "Recuperado"
         [HttpPost]
         public IActionResult Curar(int id)
         {
             var pokemon = _context.Enfermeria.Find(id);
             if (pokemon != null)
             {
-                pokemon.Estado = "Curado";
-                _context.SaveChanges();
+                if (pokemon.Estado == "Curado")
+                {
+                    TempData["Mensaje"] = $"{pokemon.NombrePokemon} ya está curado.";
+                }
+                else
+                {
+                    pokemon.Estado = "Curado";
+                    _context.SaveChanges();
+                    TempData["Mensaje"] = $"{pokemon.NombrePokemon} ha sido curado.";
+                }
+            }
+            else
+            {
+                TempData["Mensaje"] = "No se encontró el Pokémon.";
             }
             return RedirectToAction(nameof(Enfermeria));
         }
 
-        // Eliminar Pokémon de la lista
+
         [HttpPost]
         public IActionResult Eliminar(int id)
         {
@@ -47,14 +57,11 @@ namespace ProyectoG2_Pokedex.Controllers
             return RedirectToAction(nameof(Enfermeria));
         }
 
-        // Mostrar formulario para agregar Pokémon
         public IActionResult Agregar()
         {
             return View();
         }
 
-
-        // Agregar un Pokémon a la Enfermería
         [HttpPost]
         public IActionResult Agregar(EnfermeriaModel nuevoPokemon)
         {
@@ -70,7 +77,7 @@ namespace ProyectoG2_Pokedex.Controllers
 
             try
             {
-                nuevoPokemon.Estado = "Pendiente"; // Estado predeterminado
+                nuevoPokemon.Estado = "Pendiente";
                 _context.Enfermeria.Add(nuevoPokemon);
                 _context.SaveChanges();
                 return RedirectToAction("Enfermeria");

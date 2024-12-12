@@ -236,8 +236,15 @@ button:hover {
     margin-top: 100px;
 }
 
+.enfermeria-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
 .tabla-enfermeria thead {
-    background-color: white;
+    background-color: dodgerblue;
     font-weight: bold;
 }
 

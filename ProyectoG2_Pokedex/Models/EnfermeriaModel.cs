@@ -12,6 +12,6 @@ namespace ProyectoG2_Pokedex.Models
         public string NombreDueño { get; set; }
         [Required]
         public string Padecimiento { get; set; }
-        public string? Estado { get; set; } // Estado opcional
+        public string? Estado { get; set; }
     }
 }
