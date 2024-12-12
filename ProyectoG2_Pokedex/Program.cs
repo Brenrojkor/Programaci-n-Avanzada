@@ -10,7 +10,7 @@ var connectionString = builder.Configuration.GetConnectionString("Minombredecone
 builder.Services.AddDbContext<MinombredeconexionDbContext>(options =>
     options.UseMySql(
         connectionString,
-        ServerVersion.AutoDetect(connectionString) // Detecta la versión del servidor MySQL automáticamente
+        ServerVersion.AutoDetect(connectionString) 
     ));
 
 builder.Services.AddLogging(logging =>

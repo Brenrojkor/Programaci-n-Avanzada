@@ -33,3 +33,12 @@
 .card-subtitle {
     color: #666;
 }
+.button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
