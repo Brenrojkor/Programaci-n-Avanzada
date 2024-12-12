@@ -274,12 +274,8 @@ button:hover {
 }
 
 .tabla-enfermeria thead {
-    background-color: dodgerblue;
-    font-weight: bold;
-}
-
-.tabla-enfermeria tbody {
     background-color: #000000d9;
+    font-weight: bold;
 }
 
 .tabla-enfermeria th {
@@ -287,6 +283,5 @@ button:hover {
 }
 
 .tabla-enfermeria td {
-    background-color: white;
     text-align: left;
 }

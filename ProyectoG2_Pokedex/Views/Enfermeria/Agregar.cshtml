@@ -1,28 +1,115 @@
-﻿@model ProyectoG2_Pokedex.Models.UsuariosModel
+﻿@model ProyectoG2_Pokedex.Models.EnfermeriaModel
 
-<h2>Crear Usuario</h2>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pokemon-Hollow&display=swap" rel="stylesheet">
 
-<form asp-action="Agregar">
-    <div class="form-group">
-        <label for="Usuario">Usuario</label>
-        <input asp-for="Usuario" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="NombreUsuario">Nombre Completo</label>
-        <input asp-for="NombreUsuario" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="Contrasena">Contraseña</label>
-        <input asp-for="Contrasena" type="password" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="Rol">Rol</label>
-        <select asp-for="Rol" class="form-control">
-            <option>Admin</option>
-            <option>Entrenador</option>
-            <option>Enfermera</option>
-        </select>
-    </div>
-    <button type="submit" class="btn btn-primary">Guardar</button>
-</form>
+<div class="enfermeria-container">
+    <h2 class="title-enfermeria text-center">Agregar Pokémon</h2>
+
+    <form asp-action="Agregar" asp-controller="Enfermeria" method="post" class="form-enfermeria">
+        <div class="form-group">
+            <label for="NombrePokemon">Nombre del Pokémon</label>
+            <input type="text" class="form-control" id="NombrePokemon" name="NombrePokemon" required />
+        </div>
+        <div class="form-group">
+            <label for="NombreDueño">Nombre del Dueño</label>
+            <input type="text" class="form-control" id="NombreDueño" name="NombreDueño" required />
+        </div>
+        <div class="form-group">
+            <label for="Padecimiento">Padecimiento</label>
+            <input type="text" class="form-control" id="Padecimiento" name="Padecimiento" required />
+        </div>
+        <div class="form-buttons">
+            <button type="submit" class="btn btn-guardar">Guardar</button>
+            <a asp-action="Enfermeria" asp-controller="Enfermeria" class="btn btn-cancelar">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+<style>
+    /* Contenedor principal */
+    .enfermeria-container {
+        font-family: 'Press Start 2P', sans-serif;
+        max-width: 90%;
+        margin: 100px auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.7); /* Negro con 70% de transparencia */
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    /* Título */
+    .title-enfermeria {
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 2em;
+        color: white; /* Amarillo dorado */
+        margin-bottom: 20px;
+    }
+
+    /* Formulario */
+    .form-enfermeria {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 14px;
+        }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.8); /* Blanco con 80% de transparencia */
+        font-family: 'Press Start 2P', sans-serif;
+    }
+
+    /* Botones */
+    .form-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn {
+        font-family: 'Press Start 2P', sans-serif;
+        padding: 10px 15px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Botón Guardar */
+    .btn-guardar {
+        background-color: rgba(208, 0, 0, 0.8); /* Verde translúcido */
+        color: white;
+    }
+
+        .btn-guardar:hover {
+            background-color: rgba(0, 100, 0, 0.9); /* Verde más oscuro */
+        }
+
+    /* Botón Cancelar */
+    .btn-cancelar {
+        background-color: rgba(208, 0, 0, 0.8); /* Rojo translúcido */
+        color: white;
+    }
+
+        .btn-cancelar:hover {
+            background-color: rgba(150, 0, 0, 0.9); /* Rojo más oscuro */
+        }
+</style>
 
