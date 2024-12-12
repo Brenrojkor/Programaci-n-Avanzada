@@ -1,24 +1,106 @@
 ﻿@{
     ViewData["Title"] = "Mensajes";
+
+    var mensajes = ViewBag.Mensajes as IEnumerable<dynamic>;
 }
 
 <div class="text-center">
     <img src="~/images/mensajepoke.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
     <div class="phone-simulator">
-        <div class="phone-header">
-            Mensajes
-        </div>
-        <div class="phone-body">
-            <div class="message received">Hola, ¿cómo estás?</div>
-            <div class="message sent">¡Todo bien, gracias!</div>
-            <div class="message received">Genial !!!</div>
-            <div class="message received">Y, ¿Que haces?</div>
-            <div class="message received">¿Vamos a capturar pokemons?</div>
-            <div class="message sent">Claro!</div>
+        <div class="phone-header">Mensajes</div>
+        <div class="phone-body" id="mensajes-container">
+            @if (mensajes != null && mensajes.Any())
+            {
+
+                foreach (var mensaje in mensajes)
+
+                {
+                    <div class="message-bubble">
+                        <strong>@mensaje.Usuario:</strong> @mensaje.Mensaje
+                        <div class="message-time">@mensaje.Fecha</div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No hay mensajes aún.</p>
+            }
         </div>
         <div class="phone-footer">
-            <input type="text" class="message-input" placeholder="Escribe un mensaje..." />
-            <button class="send-button">Enviar</button>
+            <form asp-action="Enviar" method="post" class="message-form">
+                <input type="text" class="message-input" name="texto" placeholder="Escribe un mensaje..." required />
+                <button type="submit" class="send-button btn-trasparent btn-lg">Enviar</button>
+            </form>
         </div>
     </div>
 </div>
+
+<style>
+
+     .message-form {
+            display: flex; /* Asegura que el formulario y sus hijos estén en una fila */
+            align-items: center; /* Alinea verticalmente el input y el botón */
+            gap: 10px; /* Espacio entre el input y el botón */
+            width: 100%; /* Asegura que el formulario ocupe todo el ancho del contenedor */
+            margin: 0; /* Elimina cualquier margen predeterminado del form */
+        }
+    .message-bubble {
+            max-width: 80%;
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            text-align: left;
+            position: relative;
+        }
+
+        .message-bubble strong {
+            display: block;
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+
+        .message-time {
+            font-size: 0.75em; /* Muy pequeño para la fecha y hora */
+            color: gray;
+            margin-top: 5px;
+            text-align: right;
+        }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        function cargarMensajes() {
+            $.ajax({
+                url: '@Url.Action("ObtenerMensajes", "Mensajes")', // Ruta al método en el controlador
+                method: 'GET',
+                success: function (data) {
+                    $('#mensajes-container').empty(); // Limpia el contenedor
+
+                    // Itera sobre los datos recibidos
+                    data.forEach(function (mensaje) {
+                        $('#mensajes-container').append(`
+                                <div class="message-bubble">
+                                    <strong>${mensaje.usuario || "Usuario desconocido"}:</strong>
+                                    ${mensaje.mensaje || "Mensaje no disponible"}
+                                    <div class="message-time">${mensaje.fecha || ""}</div>
+                                </div>
+                            `);
+                    });
+                },
+                error: function (error) {
+                    console.error('Error al cargar los mensajes:', error);
+                }
+            });
+        }
+
+        // Llama a la función cada 10 segundos
+        setInterval(cargarMensajes, 10000);
+
+        // Carga los mensajes al iniciar
+        cargarMensajes();
+    });
+</script>
+

@@ -3,6 +3,7 @@
 <h2>Enfermería</h2>
 
 @if (TempData["Mensaje"] != null)
+
 {
     <div class="alert alert-info">
         @TempData["Mensaje"]
@@ -45,3 +46,34 @@
 </div>
 <br />
 <a asp-action="Agregar" class="btn btn-primary">Agregar Pokémon</a>
+
+<style>
+    .enfermeria-container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .tabla-enfermeria {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .tabla-enfermeria th, .tabla-enfermeria td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .tabla-enfermeria th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .tabla-enfermeria tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+</style>
