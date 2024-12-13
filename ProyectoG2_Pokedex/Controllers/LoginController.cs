@@ -31,18 +31,6 @@ namespace ProyectoG2_Pokedex.Controllers
             ViewBag.Error = "Usuario o contraseña incorrectos.";
             return View();
         }
-
-        [HttpGet]
-        public IActionResult Logout()
-        {
-            HttpContext.Session.Clear();
-            return RedirectToAction("Login");
-        }
-
-        public IActionResult Login()
-        {
-            return View();
-        }
     }
 }
 
