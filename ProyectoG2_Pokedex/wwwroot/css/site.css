@@ -263,7 +263,7 @@ li {
     margin: 60px auto;
     border-radius: 8px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro translúcido */
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
 }
 
@@ -275,7 +275,7 @@ li {
 }
 
     .tabla-equipotr:nth-child(even) {
-        background-color: rgba(255, 255, 255, 0.1); /* Fondo alternado translúcido */
+        background-color: rgba(255, 255, 255, 0.1);
     }
 
     .tabla-equipo th, .tabla-equipo td {
@@ -283,7 +283,7 @@ li {
     }
 
     .tabla-equipo th {
-        background-color: rgba(255, 0, 0, 0.8); /* Encabezado rojo */
+        background-color: rgba(255, 0, 0, 0.8);
         color: white;
         text-transform: uppercase;
     }

@@ -2,17 +2,17 @@
     font-family: 'Press Start 2P', sans-serif;
     text-align: center;
     padding: 20px;
-    background-color: #000000d6; /* Negro con transparencia similar al registro */
+    background-color: #000000d6;
     border-radius: 10px;
     width: 90%;
     max-width: 400px;
-    margin: 60px auto; /* Ajustado para igualar el margen */
+    margin: 60px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .login-header {
     font-family: 'Press Start 2P', sans-serif;
-    font-size: 1.9em; /* Ajusta el tamaño de la fuente */
+    font-size: 1.9em;
     color: white;
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@
 
 .login-form {
     margin-top: 15px;
-    background-color: #ffffffd9; /* Fondo blanco con 85% de transparencia */
+    background-color: #ffffffd9;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -50,9 +50,9 @@
 }
 
 .login-button {
-    background-color: #d00000d9; /* Rojo con transparencia */
-    color: #fff; /* Blanco */
-    border: solid #fff; /* Borde blanco */
+    background-color: #d00000d9;
+    color: #fff; 
+    border: solid #fff; 
     padding: 15px;
     font-size: 16px;
     width: 100%;
@@ -62,7 +62,7 @@
 }
 
     .login-button:hover {
-        background-color: #000000e1; /* Negro al hacer hover */
+        background-color: #000000e1;
     }
 
 .forgot-password {
@@ -97,5 +97,5 @@
 }
 
     .pokemon-characters img {
-        height: 150px; /* Igual que en el registro */
+        height: 150px;
     }
