@@ -40,3 +40,19 @@ CREATE TABLE Mensajes (
     FOREIGN KEY (IdUsuario) REFERENCES Usuarios(IdUsuario) -- Relación con la tabla Usuarios
 );
 
+-- Crear la tabla de Equipo
+CREATE TABLE Equipo(
+NombreEquipo VARCHAR(100) PRIMARY KEY,
+IdUsuario INT,
+FOREIGN KEY (IdUsuario) REFERENCES Usuarios(IdUsuario) -- Relación con la tabla Usuarios
+);
+
+-- Crear la tabla de Entrenador
+CREATE TABLE Entrenador (
+IdEntrenador INT AUTO_INCREMENT PRIMARY KEY,
+NombreEntrenador VARCHAR(100),
+NombreEquipo VARCHAR(100),
+Nivel INT,
+Estado BOOLEAN,
+ FOREIGN KEY (NombreEquipo) REFERENCES Equipo(NombreEquipo) -- Relación con la tabla Equipo
+);
