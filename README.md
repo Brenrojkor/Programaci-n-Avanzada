@@ -18,7 +18,7 @@ A functional Pokémon game/project developed with the tools seen in the Advanced
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** C#
 - **Database:** SQL Express
-- **Server:** MVC
+- **Server:** IIS Express
 - **Version Control:** Git
 
 ## Project Members
