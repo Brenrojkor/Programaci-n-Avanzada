@@ -56,3 +56,28 @@ Nivel INT,
 Estado BOOLEAN,
  FOREIGN KEY (NombreEquipo) REFERENCES Equipo(NombreEquipo) -- Relación con la tabla Equipo
 );
+
+-- Insert de otro usuario 
+INSERT INTO Usuarios (Usuario, NombreUsuario, Contrasena, Rol)
+VALUES ('Paola', 'Pao', '1234', 'Entrenador');
+
+-- Insert de tabla Equipo
+INSERT INTO Equipo (NombreEquipo, IdUsuario)
+VALUES
+('Team A', '1'),
+('Team B', '2');
+
+
+-- Insert de tabla Entrenador
+INSERT INTO Entrenador (NombreEntrenador, NombreEquipo, Nivel, Estado)
+VALUES
+('Entrenador 1', 'Team A', 3, TRUE),
+('Entrenador 2', 'Team B', 2, FALSE),
+('Entrenador 3', 'Team A', 1, TRUE),
+('Entrenador 4', 'Team B', 4, TRUE),
+('Entrenador 5', 'Team A', 2, FALSE),
+('Entrenador 6', 'Team B', 3, TRUE),
+('Entrenador 7', 'Team A', 2, TRUE),
+('Entrenador 8', 'Team B', 1, FALSE),
+('Entrenador 9', 'Team A', 4, TRUE),
+('Entrenador 10', 'Team B', 3, TRUE);
