@@ -257,6 +257,45 @@ li {
     margin-bottom: 20px;
 }
 
+.equipo-container {
+    font-family: 'Press Start 2P', sans-serif;
+    max-width: 90%;
+    margin: 60px auto;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro translúcido */
+    color: white;
+}
+
+.tabla-equipo {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    text-align: center;
+}
+
+    .tabla-equipotr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.1); /* Fondo alternado translúcido */
+    }
+
+    .tabla-equipo th, .tabla-equipo td {
+        padding: 10px;
+    }
+
+    .tabla-equipo th {
+        background-color: rgba(255, 0, 0, 0.8); /* Encabezado rojo */
+        color: white;
+        text-transform: uppercase;
+    }
+
+.title-equipo {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 2em;
+    color: white;
+    margin: 60px auto;
+    margin-bottom: 20px;
+}
+
     .edit-btn {
     background-color: #f39c12;
     color: white;

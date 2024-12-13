@@ -14,6 +14,6 @@ namespace ProyectoG2_Pokedex.Models
 
         // Relación con el modelo de usuario
         [ForeignKey("NombreEquipo")]
-        public EquipoModel Equipo { get; set; }
+        public EquipoLuchaModel Equipo { get; set; }
     }
 }

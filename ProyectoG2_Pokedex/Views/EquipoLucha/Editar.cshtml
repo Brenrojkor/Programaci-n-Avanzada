@@ -1,0 +1,20 @@
+﻿@model ProyectoG2_Pokedex.Models.EquipoLuchaModel 
+
+<div class="equipo-container">
+    <h1>Agregar Nuevo Equipo</h1>
+    <form asp-action="Agregar" method="post">
+        <div class="form-group">
+            <label asp-for="NombreEquipo"></label>
+            <input asp-for="NombreEquipo" class="form-control" />
+            <span asp-validation-for="NombreEquipo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="IdUsuario"></label>
+            <input asp-for="IdUsuario" class="form-control" />
+            <span asp-validation-for="Usuario" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a asp-action="Usuarios" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+

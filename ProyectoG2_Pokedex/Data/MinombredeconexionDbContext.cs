@@ -13,6 +13,8 @@ namespace ProyectoG2_Pokedex.Data
         public DbSet<EnfermeriaModel> Enfermeria { get; set; }
         public DbSet<MensajeModel> Mensajes { get; set; }
         public DbSet<EntrenadoresModel> Entrenador { get; set; }
+        public DbSet<EquipoLuchaModel> Equipo { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -21,6 +23,7 @@ namespace ProyectoG2_Pokedex.Data
             modelBuilder.Entity<EnfermeriaModel>().HasKey(e => e.AtencionID);
             modelBuilder.Entity<MensajeModel>().ToTable("Mensajes");
             modelBuilder.Entity<EntrenadoresModel>().ToTable("Entrenador");
+            modelBuilder.Entity<EquipoLuchaModel>().ToTable("Equipo");
 
         }
     }
