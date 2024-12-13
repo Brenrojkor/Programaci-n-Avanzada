@@ -44,13 +44,14 @@
                     const imageUrl = data.sprites.front_default;
                     const newRow = document.createElement("tr");
                     newRow.innerHTML = `
-                        <td><img src="${imageUrl}" alt="${name}" style="width:50px;height:50px;"></td>
-                        <td>${name}</td>
-                        <td>${type}</td>
-                        <td>
-                            <button class="btn btn-delete" style="background-color: rgba(208, 0, 0, 0.8); color: white;">Delete</button>
-                        </td>
-                    `;
+                            <td><img src="${imageUrl}" alt="${name}" style="width:50px;height:50px;"></td>
+                            <td>${name}</td>
+                            <td>${type}</td>
+                            <td>
+                                <button class="btn btn-edit" style="background-color: rgba(208, 0, 0, 0.8); color: white;">Edit</button>
+                                <button class="btn btn-delete" style="background-color: rgba(208, 0, 0, 0.8); color: white;">Delete</button>
+                            </td>
+                        `;
                     tableList.appendChild(newRow);
                     attachRowListeners(newRow);
                 } catch (error) {
@@ -62,12 +63,15 @@
         });
 
         function attachRowListeners(row) {
-            
+            const editButton = row.querySelector(".btn-edit");
             const deleteButton = row.querySelector(".btn-delete");
 
             editButton.addEventListener("click", () => {
                 const nameCell = row.children[1];
                 const typeCell = row.children[2];
+
+                const newName = prompt("Edit Pokémon Name:", nameCell.textContent);
+                const newType = prompt("Edit Pokémon Type:", typeCell.textContent);
 
                 if (newName && newType) {
                     nameCell.textContent = newName;
