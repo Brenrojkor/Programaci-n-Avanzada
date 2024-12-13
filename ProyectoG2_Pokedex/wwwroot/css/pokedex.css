@@ -105,6 +105,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    background-color: rgba(208, 0, 0, 0.8);
 }
 
 .btn-edit {
@@ -115,7 +116,7 @@
     .btn-edit:hover {
         background-color: rgba(150, 0, 0, 0.9);
     }
-*/
+
 .btn-delete {
     background-color: rgba(208, 0, 0, 0.8);
     color: white;

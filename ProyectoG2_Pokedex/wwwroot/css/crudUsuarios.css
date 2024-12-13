@@ -1,14 +1,13 @@
-﻿/* Contenedor general */
+﻿
 .pokedex-container {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro transparente */
-    color: white; /* Letras blancas */
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-family: 'Press Start 2P', sans-serif; /* Fuente retro */
+    font-family: 'Press Start 2P', sans-serif; 
 }
 
-    /* Encabezado del título */
     .pokedex-container .title {
         font-size: 1.8em;
         margin-bottom: 20px;
@@ -16,7 +15,7 @@
         text-transform: uppercase;
     }
 
-/* Tabla */
+
 .table {
     width: 100%;
     text-align: center;
@@ -26,7 +25,7 @@
 
     .table th, .table td {
         padding: 10px;
-        border: 1px solid white; /* Borde blanco */
+        border: 1px solid white; 
         color:white;
     }
 
@@ -35,7 +34,7 @@
         text-transform: uppercase;
     }
 
-/* Botones */
+
 .btn {
     padding: 10px 15px;
     font-size: 14px;
@@ -43,12 +42,11 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-family: 'Press Start 2P', sans-serif; /* Fuente retro */
+    font-family: 'Press Start 2P', sans-serif; 
 }
 
-/* Botones Editar */
 .btn-edit {
-    background-color: rgba(0, 0, 208, 0.8); /* Azul con transparencia */
+    background-color: rgba(0, 0, 208, 0.8); 
     color: white;
 }
 
@@ -56,9 +54,9 @@
         background-color: rgba(0, 0, 150, 0.9);
     }
 
-/* Botones Eliminar */
+
 .btn-delete {
-    background-color: rgba(208, 0, 0, 0.8); /* Rojo con transparencia */
+    background-color: rgba(208, 0, 0, 0.8); 
     color: white;
 }
 
@@ -66,13 +64,13 @@
         background-color: rgba(150, 0, 0, 0.9);
     }
 
-/* Formulario */
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-size: 1em;
     text-transform: uppercase;
-    color: white; /* Letras blancas */
+    color: white; 
 }
 
 .form-group input {
@@ -81,9 +79,9 @@
     margin-bottom: 15px;
     border: 1px solid white;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
-    color: white; /* Texto blanco */
-    font-family: 'Press Start 2P', sans-serif; /* Fuente retro */
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    font-family: 'Press Start 2P', sans-serif; 
 }
 
     .form-group input:focus {
@@ -99,11 +97,11 @@ button[type="submit"], .btn-secondary {
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
-    font-family: 'Press Start 2P', sans-serif; /* Fuente retro */
+    font-family: 'Press Start 2P', sans-serif; 
 }
 
 button[type="submit"] {
-    background-color: rgba(0, 150, 0, 0.8); /* Verde */
+    background-color: rgba(0, 150, 0, 0.8); 
     color: white;
 }
 
@@ -112,7 +110,7 @@ button[type="submit"] {
     }
 
 .btn-secondary {
-    background-color: rgba(150, 150, 150, 0.8); /* Gris */
+    background-color: rgba(150, 150, 150, 0.8); 
     color: white;
     text-decoration: none;
     display: inline-block;
