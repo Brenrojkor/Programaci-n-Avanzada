@@ -1,23 +1,29 @@
-﻿@{
-    ViewData["Title"] = "Entrenadores Pokemons";
-}
+﻿@model IEnumerable<ProyectoG2_Pokedex.Models.EntrenadoresModel>
 
-<script src="~/js/entrenador.js"></script>
-
+<h2 class="title-entrenador text-center">Entrenador Pokemón</h2>
 <div class="text-center">
-    <img src="~/images/pokentrenadores.png" alt="Logo Pokémon" class="pokemon-logo mb-4" />
     <div class="entrenador-container">
-        <div class="entrenadores-list">
-            <h2>Entrenadores disponibles</h2>
-            <ul id="entrenadores"></ul> 
-            <br />
-            <input type="text" id="nuevoEntrenador" placeholder="Nombre del entrenador" />
-            <br />
-            <br />
-            <button class="add-btn"onclick="addTrainer()">Agregar Entrenador</button>
-            <button class="edit-btn" onclick="editTrainer()">Editar Entrenador</button>
-            <button class="delete-btn" onclick="deleteTrainer()">Elinimar Entrenador</button>
-        </div>
+        <table class="tabla-entrenador">
+            <thead>
+                <tr>
+                    <th>Nombre Entrenador</th>
+                    <th>Nombre Equipo</th>
+                    <th>Nivel</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var pokemon in Model)
+                {
+                    <tr>
+                        <td>@pokemon.NombreEntrenador</td>
+                        <td>@pokemon.NombreEquipo</td>
+                        <td>@pokemon.Nivel</td>
+                        <td>@pokemon.Estado</td>
+                    </tr>
+                }
+            </tbody>
+       </table>
     </div>
 </div>
 

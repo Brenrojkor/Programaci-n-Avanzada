@@ -12,12 +12,16 @@ namespace ProyectoG2_Pokedex.Data
         public DbSet<UsuariosModel> Usuarios { get; set; }
         public DbSet<EnfermeriaModel> Enfermeria { get; set; }
         public DbSet<MensajeModel> Mensajes { get; set; }
+        public DbSet<EntrenadoresModel> Entrenador { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UsuariosModel>().ToTable("Usuarios");
             modelBuilder.Entity<EnfermeriaModel>().ToTable("Enfermeria");
             modelBuilder.Entity<EnfermeriaModel>().HasKey(e => e.AtencionID);
             modelBuilder.Entity<MensajeModel>().ToTable("Mensajes");
+            modelBuilder.Entity<EntrenadoresModel>().ToTable("Entrenador");
+
         }
     }
 }

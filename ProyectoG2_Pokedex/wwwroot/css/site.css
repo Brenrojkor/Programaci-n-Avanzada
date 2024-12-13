@@ -220,14 +220,44 @@ li {
         }
 
 .entrenador-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    margin-top: 100px;
+    font-family: 'Press Start 2P', sans-serif;
+    max-width: 90%;
+    margin: 60px auto;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro translúcido */
+    color: white;
+}
+.tabla-entrenador{
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    text-align: center;
 }
 
+.tabla-entrenador tr:nth-child(even) {
+   background-color: rgba(255, 255, 255, 0.1); /* Fondo alternado translúcido */
+}
 
-.edit-btn {
+.tabla-entrenadorth, .tabla-entrenador td {
+    padding: 10px;
+}
+
+.tabla-entrenador th {
+    background-color: rgba(255, 0, 0, 0.8); /* Encabezado rojo */
+    color: white;
+    text-transform: uppercase;
+}
+
+.title-entrenador {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 2em;
+    color: white;
+    margin: 60px auto;
+    margin-bottom: 20px;
+}
+
+    .edit-btn {
     background-color: #f39c12;
     color: white;
     margin: 20px;
