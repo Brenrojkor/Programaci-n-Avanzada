@@ -13,19 +13,15 @@ namespace ProyectoG2_Pokedex.Controllers
         {
             _context = context;
         }
-
-        // Verificar si el usuario está logueado
         private bool UsuarioLogueado()
         {
             return HttpContext.Session.GetInt32("IdUsuario") != null;
         }
 
-        // Vista de la mensajería
         public IActionResult Mensajes()
         {
             if (!UsuarioLogueado())
             {
-                // Redirige al login si no está logueado
                 return RedirectToAction("Index", "Home");
             }
 
@@ -50,8 +46,8 @@ namespace ProyectoG2_Pokedex.Controllers
                                    .Select(m => new
                                    {
                                        m.Mensaje,
-                                       Usuario = m.Usuario.Usuario, // Nombre del usuario
-                                       Fecha = m.Fecha.ToString("dd/MM/yyyy hh:mm:ss tt") // Formato legible de la fecha
+                                       Usuario = m.Usuario.Usuario,
+                                       Fecha = m.Fecha.ToString("dd/MM/yyyy hh:mm:ss tt")
                                    })
                                    .ToList();
 
@@ -62,7 +58,6 @@ namespace ProyectoG2_Pokedex.Controllers
         {
             if (!UsuarioLogueado())
             {
-                // Redirige al login si no está logueado
                 return RedirectToAction("Index", "Home");
             }
 

@@ -18,7 +18,6 @@ namespace ProyectoG2_Pokedex.Models
 
         public DateTime Fecha { get; set; }
 
-        // Relación con el modelo de usuario
         [ForeignKey("IdUsuario")]
         public UsuariosModel Usuario { get; set; }
     }

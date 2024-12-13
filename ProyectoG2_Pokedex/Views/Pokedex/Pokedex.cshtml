@@ -71,7 +71,6 @@
         const tableList = document.getElementById("table-list").querySelector("tbody");
         const addButton = document.getElementById("add");
 
-        // Función para agregar un Pokémon
         addButton.addEventListener("click", async () => {
             const name = prompt("Enter Pokémon Name:");
             const type = prompt("Enter Pokémon Type:");
@@ -79,15 +78,12 @@
 
             if (name && type && apiUrl) {
                 try {
-                    // Fetch the Pokémon data from the API
                     const response = await fetch(apiUrl);
                     if (!response.ok) {
                         throw new Error("Failed to fetch Pokémon data.");
                     }
                     const data = await response.json();
-                    const imageUrl = data.sprites.front_default; // Get the image URL
-
-                    // Create the new row
+                    const imageUrl = data.sprites.front_default;
                     const newRow = document.createElement("tr");
                     newRow.innerHTML = `
                         <td><img src="${imageUrl}" alt="${name}" style="width:50px;height:50px;"></td>
@@ -108,7 +104,6 @@
             }
         });
 
-        // Función para editar o eliminar un Pokémon
         function attachRowListeners(row) {
             const editButton = row.querySelector(".btn-edit");
             const deleteButton = row.querySelector(".btn-delete");
@@ -135,7 +130,6 @@
             });
         }
 
-        // Añadir listeners a las filas existentes
         tableList.querySelectorAll("tr").forEach(attachRowListeners);
     });
 </script>

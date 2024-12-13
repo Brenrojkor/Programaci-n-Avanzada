@@ -12,7 +12,6 @@ namespace ProyectoG2_Pokedex.Models
         public int Nivel {  get; set; }
         public bool Estado {  get; set; }
 
-        // Relación con el modelo de usuario
         [ForeignKey("NombreEquipo")]
         public EquipoLuchaModel Equipo { get; set; }
     }

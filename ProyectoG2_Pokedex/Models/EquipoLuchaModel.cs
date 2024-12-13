@@ -11,7 +11,6 @@ namespace ProyectoG2_Pokedex.Models
         [Required]
         public int IdUsuario { get; set; }
 
-        // Relación con el modelo de usuario
         [ForeignKey("IdUsuario")]
         public UsuariosModel Usuario { get; set; }
     }

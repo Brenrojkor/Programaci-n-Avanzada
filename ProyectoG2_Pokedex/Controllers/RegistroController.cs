@@ -21,7 +21,7 @@ namespace ProyectoG2_Pokedex.Controllers
             {
                 Usuario = Request.Form["Usuario"],
                 NombreUsuario = Request.Form["NombreUsuario"],
-                Contrasena = BCrypt.Net.BCrypt.HashPassword(Request.Form["Contrasena"]), // Hashear contraseña
+                Contrasena = BCrypt.Net.BCrypt.HashPassword(Request.Form["Contrasena"]),
                 Rol = Request.Form["Rol"]
             };
 
@@ -39,7 +39,7 @@ namespace ProyectoG2_Pokedex.Controllers
                 _context.Usuarios.Add(usuario);
                 _context.SaveChanges();
 
-                return RedirectToAction("Pokedex", "Pokedex");
+                return RedirectToAction("Index", "Home");
             }
             catch (Exception ex)
             {
