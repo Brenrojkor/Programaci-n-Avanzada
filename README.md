@@ -1,6 +1,6 @@
 # Pokémon
 
-A functional Pokémon game/project developed with the tools seen in the Advanced Programming course.
+A functional Pokémon project developed with the tools seen in the Advanced Programming course.
 
 ## Features
 
