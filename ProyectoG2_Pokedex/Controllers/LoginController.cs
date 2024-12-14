@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProyectoG2_Pokedex.Data;
 using System.Linq;
-using Microsoft.AspNetCore.Http; // Para trabajar con sesiones
+using Microsoft.AspNetCore.Http;
 using BCrypt.Net;
 
 namespace ProyectoG2_Pokedex.Controllers
